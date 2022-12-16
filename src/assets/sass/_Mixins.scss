@@ -1,0 +1,27 @@
+@mixin flex($direction, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+@mixin buttonStyle {
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin backgroundObjectImage($width, $height) {
+  background-position: center;
+  background-size: cover;
+  width: $width;
+  height: $height;
+}
+@mixin grid($templateColumns) {
+  display: grid;
+  grid-template-columns: $templateColumns;
+}
