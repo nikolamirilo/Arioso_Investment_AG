@@ -1,63 +1,63 @@
 .navbar {
-  min-height: 8vh;
+  min-height: 10vh;
+  height: fit-content;
   z-index: 1000;
   height: fit-content;
   width: 100%;
-  background-color: $white;
+  background-color: $darkGray;
   position: fixed;
   top: 0;
   @include flex(row, space-between, center);
-  padding: 0 5vw;
-  @include media($xs) {
-    padding: 0 1vw;
+  padding: 1vh 5vw;
+  @include media($md) {
+    padding: 1vh 2vw;
   }
   .logo {
     @include flex(row, center, center);
-    height: 8vh;
+    height: fit-content;
     width: fit-content;
     @include media($xs) {
       display: block;
-      position: relative;
-      top: 0.5rem;
-      left: 0.5rem;
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
     }
     img {
-      height: 5vh;
+      height: 10vh;
       width: auto;
     }
   }
   .navigation {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, center);
     height: fit-content;
     .hamburger {
       background-color: transparent;
       border: none;
       position: fixed;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 1.5rem;
+      right: 2vw;
+      color: $white;
     }
     .links {
       @include flex(row, space-around, center);
       height: 8vh;
       width: fit-content;
       gap: 3rem;
-      @include media($sm) {
-        width: fit-content;
-      }
-      @include media($xs) {
+      @include media($md) {
         height: fit-content;
         @include flex(column, flex-end, flex-end);
-        padding: 4rem 0.5rem 1rem 0;
+        padding: 5rem 0rem 1rem 0;
         gap: 1rem;
       }
       button {
         background-color: transparent;
         border: none;
-        color: $black;
-        font-size: 1.4rem;
+        color: $white;
+        font-size: $linkFS;
         cursor: pointer;
         font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

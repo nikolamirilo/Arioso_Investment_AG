@@ -1,36 +1,19 @@
 import React from "react";
-import { BsGlobe, BsInstagram } from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
+import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
 import { useGlobalState } from "./../../../../context/GlobalContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { contactSection } = useGlobalState();
   return (
     <footer className="footer" ref={contactSection}>
-      <div className="contact">
-        <button
-          onClick={() => {
-            window.location.href = "mailto:unsplash@gmail.com";
-          }}
-        >
-          <AiOutlineMail size={25} />
-        </button>
-        <button
-          onClick={() => {
-            window.location.href = "https://unsplash.com/";
-          }}
-        >
-          <BsGlobe size={25} />
-        </button>
-        <button
-          onClick={() => {
-            window.location.href = "https://www.instagram.com/unsplash/";
-          }}
-        >
-          <BsInstagram size={25} />
-        </button>
+      <div className="left-content">
+        <img src={logo} alt="Logo" />
       </div>
-      <p>Copyright @S2S-2022</p>
+      <div className="right-content">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <p>Copyright @Ariso Investment AG 2022</p>
+      </div>
     </footer>
   );
 };

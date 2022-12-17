@@ -13,7 +13,6 @@ const Layout = ({ children }) => {
       <main className="app" style={theme}>
         {children}
       </main>
-
       <div className="footer-container">
         <Footer />
       </div>
