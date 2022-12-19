@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
-import { useNavigate } from "react-router-dom";
-import { useGlobalState } from "./../../../../context/GlobalContext";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
+import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
+import { useGlobalState } from "./../../../../context/GlobalContext";
 import { useThemeContext } from "./../../../../context/ThemeContext";
-import { scrollFunction } from "../../../../helpers/scrollFunction";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
   const { width } = useGlobalState();
-  const [isActive, setIsActive] = useState({ home: true, about: false, offer: false, team: false, contact: false });
+  const [isActive, setIsActive] = useState({
+    home: true,
+    about: false,
+    offer: false,
+    team: false,
+    contact: false,
+  });
   const { theme, setDark, setLight } = useThemeContext();
   const { contactSection } = useGlobalState();
   const navigate = useNavigate();

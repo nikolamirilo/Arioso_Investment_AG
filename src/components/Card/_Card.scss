@@ -1,0 +1,20 @@
+.card {
+  background-color: $lightGray;
+  border-radius: 20px;
+  padding: 1rem;
+  @include flex(column, center, center);
+  width: 450px;
+  @include media($lg) {
+    width: 400px;
+  }
+  @include media($md) {
+    width: 90%;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-family: $headingFontFamily;
+  }
+  p {
+    font-size: $paragraphFS;
+  }
+}

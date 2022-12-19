@@ -1,9 +1,15 @@
 import React from "react";
 
-//Two types of card - row and row reverse
+//Cards for home page and team
 
-const Card = () => {
-  return <div className="card">Card</div>;
+const Card = (props) => {
+  return (
+    <div className="card">
+      {props.icon}
+      <h3>{props.title}</h3>
+      <p>{props.text}</p>
+    </div>
+  );
 };
 
 export default Card;

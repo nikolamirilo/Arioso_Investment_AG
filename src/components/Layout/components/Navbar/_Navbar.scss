@@ -56,7 +56,11 @@
         cursor: pointer;
         font-weight: 500;
         &:hover {
-          text-decoration: underline;
+          text-decoration: underline !important;
+        }
+        &:focus,
+        &:active {
+          border: none;
         }
       }
     }

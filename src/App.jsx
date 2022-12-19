@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
-import { Layout, ScrollToTop } from "./components";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { Layout, Loader, ScrollToTop } from "./components";
+import { useGlobalState } from "./context/GlobalContext";
+import { useLoader } from "./hooks/useLoader";
 
 //pages
 const Home = React.lazy(() => import("./pages/Home/Home"));
@@ -12,6 +14,11 @@ const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy/PrivacyPoli
 const Error = React.lazy(() => import("./pages/Error/Error"));
 
 const App = () => {
+  const { loading } = useGlobalState();
+
+  useLoader();
+
+  if (loading) return <Loader />;
   return (
     <Layout>
       <ScrollToTop>

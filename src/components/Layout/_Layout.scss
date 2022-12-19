@@ -7,8 +7,9 @@
   @import "./components/Navbar/Navbar";
   .app {
     width: 100%;
+    min-height: 100vh;
     height: fit-content;
-    padding: 10vh 0 20vh 0;
+    padding: 10vh 0 15vh 0;
     @include media($xs) {
       padding: 10vh 0 40vh 0;
     }

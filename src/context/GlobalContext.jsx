@@ -1,4 +1,4 @@
-import { useState, createContext, useContext, useEffect, useRef } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const GlobalState = createContext();
 
@@ -8,6 +8,7 @@ export const useGlobalState = () => {
 
 export const GlobalStateProvider = ({ children }) => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [loading, setLoading] = useState(true);
 
   const setDimension = () => {
     setWidth(window.innerWidth);
@@ -27,6 +28,8 @@ export const GlobalStateProvider = ({ children }) => {
       value={{
         width,
         contactSection,
+        loading,
+        setLoading,
       }}
     >
       {children}

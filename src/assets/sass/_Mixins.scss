@@ -25,3 +25,9 @@
   display: grid;
   grid-template-columns: $templateColumns;
 }
+@mixin pageSectionPadding {
+  padding: 10vh 10vw;
+  @include media($xs) {
+    padding: 10vh 1vw;
+  }
+}
