@@ -38,6 +38,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <h1>We offer more than money</h1>
       <div className="services">
         <Card
           icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
@@ -94,6 +95,9 @@ const Home = () => {
             medium-sized businesses."
         />
       </div>
+      <h1 className="quote">
+        <i>It is the trust between Investor, entrepreneur & network that is the key to success.</i>
+      </h1>
     </div>
   );
 };

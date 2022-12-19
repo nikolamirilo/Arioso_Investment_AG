@@ -1,6 +1,7 @@
 .card {
   background-color: $lightGray;
   border-radius: 20px;
+  position: relative;
   padding: 1rem;
   @include flex(column, center, center);
   width: 450px;
@@ -9,6 +10,10 @@
   }
   @include media($md) {
     width: 90%;
+  }
+  .icon {
+    position: relative;
+    bottom: 2rem;
   }
   h3 {
     font-size: 1.6rem;

@@ -28,6 +28,6 @@
 @mixin pageSectionPadding {
   padding: 10vh 10vw;
   @include media($xs) {
-    padding: 10vh 1vw;
+    padding: 10vh 4vw;
   }
 }

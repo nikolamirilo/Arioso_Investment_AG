@@ -5,7 +5,7 @@ import React from "react";
 const Card = (props) => {
   return (
     <div className="card">
-      {props.icon}
+      <div className="icon">{props.icon}</div>
       <h3>{props.title}</h3>
       <p>{props.text}</p>
     </div>
