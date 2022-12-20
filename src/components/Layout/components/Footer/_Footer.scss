@@ -4,7 +4,6 @@
   width: 100%;
   background-color: $darkGray;
   color: $white;
-  font-family: $fontFamily;
   position: absolute;
   bottom: 0;
   @include flex(row, space-between, center);
@@ -28,6 +27,7 @@
     a {
       text-decoration: none;
       font-size: $linkFS;
+      font-family: $noteFontFamily;
       color: $white;
       &:hover {
         text-decoration: underline;

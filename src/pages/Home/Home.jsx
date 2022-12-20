@@ -1,5 +1,10 @@
 import React from "react";
-import { BsFillDashCircleFill } from "react-icons/bs";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { CgSandClock } from "react-icons/cg";
+import { FaUserGraduate } from "react-icons/fa";
+import { GiNetworkBars } from "react-icons/gi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RxRocket } from "react-icons/rx";
 import { Card, Hero } from "../../components";
 
 const Home = () => {
@@ -10,7 +15,7 @@ const Home = () => {
         title="We are Ariso Investment AG"
         subtitle="Leading Investment Company"
       />
-      <div className="who-we-are">
+      <div className="intro-home">
         <div className="left-content">
           <p>
             Arioso Investment AG is a real estate investment firm specializing in the acquisition,
@@ -41,8 +46,8 @@ const Home = () => {
       <h1>We offer more than money</h1>
       <div className="services">
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<AiOutlineClockCircle size={30} />}
+          title="Investment"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -50,8 +55,8 @@ const Home = () => {
             medium-sized businesses."
         />
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<GiNetworkBars size={30} />}
+          title="Network"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -59,8 +64,8 @@ const Home = () => {
             medium-sized businesses."
         />
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<RxRocket size={30} />}
+          title="Partner"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -68,8 +73,8 @@ const Home = () => {
             medium-sized businesses."
         />
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<MdOutlineVerifiedUser size={30} />}
+          title="Trust"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -77,8 +82,8 @@ const Home = () => {
             medium-sized businesses."
         />
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<FaUserGraduate size={30} color="#fff" />}
+          title="Expertise"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -86,8 +91,8 @@ const Home = () => {
             medium-sized businesses."
         />
         <Card
-          icon={<BsFillDashCircleFill color="#eeb238ff" size={40} />}
-          title="Pera"
+          icon={<CgSandClock size={30} />}
+          title="Enduring Nature"
           text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
             businesses in growth phases and safeguards the interests of investors. In conjunction
             with the business investors, the professional investment team and the expertise made
@@ -96,7 +101,10 @@ const Home = () => {
         />
       </div>
       <h1 className="quote">
-        <i>It is the trust between Investor, entrepreneur & network that is the key to success.</i>
+        <i>
+          It is the trust between Investor, entrepreneur <span className="special">&</span> network
+          that is the key to success.
+        </i>
       </h1>
     </div>
   );

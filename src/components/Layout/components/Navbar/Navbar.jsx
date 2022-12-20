@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <div className="links" style={{ display: !isClicked && width < 1000 && "none" }}>
           <button
-            style={{ textDecoration: isActive.home ? "underline" : "none" }}
+            style={{ borderBottom: isActive.home ? "1px solid #ffff" : "none" }}
             onClick={() => {
               setIsActive({ home: true });
               navigate("/");
@@ -60,7 +60,7 @@ const Navbar = () => {
             Home
           </button>
           <button
-            style={{ textDecoration: isActive.about ? "underline" : "none" }}
+            style={{ borderBottom: isActive.about ? "1px solid #ffff" : "none" }}
             onClick={() => {
               setIsActive({ about: true });
               navigate("/about-us");
@@ -70,7 +70,7 @@ const Navbar = () => {
             About Us
           </button>
           <button
-            style={{ textDecoration: isActive.offer ? "underline" : "none" }}
+            style={{ borderBottom: isActive.offer ? "1px solid #ffff" : "none" }}
             onClick={() => {
               setIsActive({ offer: true });
               navigate("/offer");
@@ -80,7 +80,7 @@ const Navbar = () => {
             Offer
           </button>
           <button
-            style={{ textDecoration: isActive.team ? "underline" : "none" }}
+            style={{ borderBottom: isActive.team ? "1px solid #ffff" : "none" }}
             onClick={() => {
               setIsActive({ team: true });
               navigate("/our-team");
@@ -90,7 +90,7 @@ const Navbar = () => {
             Our Team
           </button>
           <button
-            style={{ textDecoration: isActive.contact ? "underline" : "none" }}
+            style={{ borderBottom: isActive.contact ? "1px solid #ffff" : "none" }}
             onClick={() => {
               setIsActive({ contact: true });
               navigate("/contact");

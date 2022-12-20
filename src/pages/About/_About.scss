@@ -1,0 +1,67 @@
+.about {
+  height: fit-content;
+  .intro-about {
+    @include grid(49% 49%);
+    gap: 2%;
+    @include pageSectionPadding;
+    @include media($md) {
+      @include flex(column, center, center);
+    }
+    .left-content,
+    .right-content {
+      @include flex(column, flex-start, center);
+      gap: 1vh;
+
+      p {
+        font-size: $paragraphFS;
+        text-align: justify;
+        color: $gray;
+      }
+    }
+  }
+  h1 {
+    font-family: $headingFontFamily;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: $darkGray;
+  }
+  .who-we-are {
+    @include pageSectionPadding;
+    @include flex(column, center, center);
+    gap: 1vh;
+    details {
+      @include flex(column, center, flex-start);
+      width: 80%;
+      @include media($sm) {
+        width: 90%;
+      }
+      @include media($xs) {
+        width: 100%;
+      }
+      border: 2px solid $lightGray;
+      padding: 1rem 2rem;
+      font-size: $paragraphFS;
+      border-radius: 10px;
+
+      p {
+        color: $gray;
+        font-size: $paragraphFS;
+        font-family: $fontFamily;
+        padding: 1vh 2vw;
+        width: 100%;
+      }
+      summary {
+        color: $black;
+        cursor: pointer;
+        font-family: $fontFamily;
+        padding-left: 1rem;
+        &::marker {
+          border: 1px solid $gray;
+          font-size: 1.4rem;
+          @include flex(column, center, center);
+        }
+      }
+    }
+  }
+}

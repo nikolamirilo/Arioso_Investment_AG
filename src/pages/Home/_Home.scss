@@ -1,6 +1,6 @@
 .home {
   height: fit-content;
-  .who-we-are {
+  .intro-home {
     @include grid(49% 49%);
     gap: 2%;
     @include pageSectionPadding;
@@ -28,6 +28,13 @@
   }
   .quote {
     @include pageSectionPadding;
+    margin-bottom: 5vh;
+    .special {
+      font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 3rem;
+    }
   }
   .services {
     @include pageSectionPadding;

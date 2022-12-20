@@ -1,16 +1,22 @@
 .navbar {
-  min-height: 10vh;
+  min-height: 8vh;
   height: fit-content;
   z-index: 1000;
   height: fit-content;
   width: 100%;
   background-color: $darkGray;
+  transition-property: height;
+  transition-timing-function: ease-in;
+  transition-duration: 1000ms;
   position: fixed;
   top: 0;
   @include flex(row, space-between, center);
   padding: 1vh 5vw;
   @include media($md) {
-    padding: 1vh 2vw;
+    padding: 0.2vh 2vw;
+  }
+  &:active {
+    height: fit-content;
   }
   .logo {
     @include flex(row, center, center);
@@ -22,7 +28,7 @@
       margin-left: 0.5rem;
     }
     img {
-      height: 10vh;
+      height: 8vh;
       width: auto;
     }
   }
@@ -36,6 +42,12 @@
       top: 1.5rem;
       right: 2vw;
       color: $white;
+      transition-property: transform;
+      transition-duration: 200ms;
+      transition-timing-function: ease-in;
+      &:active {
+        transform: rotate(360deg);
+      }
     }
     .links {
       @include flex(row, space-around, center);
@@ -55,8 +67,11 @@
         font-size: $linkFS;
         cursor: pointer;
         font-weight: 500;
+        transition-property: border;
+        transition-duration: 100ms;
+        transition-timing-function: ease-in;
         &:hover {
-          text-decoration: underline !important;
+          border-bottom: 1px solid $white !important;
         }
         &:focus,
         &:active {
