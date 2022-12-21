@@ -19,23 +19,28 @@ const Home = () => {
       <div className="intro-home">
         <div className="left-content">
           <p>
-            Arioso Investment AG is a real estate investment firm specializing in the acquisition, development and
-            management of commercial real estate (office, logistics and retail centers) in Western, Central and Eastern
-            Europe, with a primary focus on Austria Germany Switzerland Belgium and Netherlands.
+            Arioso Investment AG is a real estate investment firm specializing in the acquisition,
+            development and management of commercial real estate (office, logistics and retail
+            centers) in Western, Central and Eastern Europe, with a primary focus on Austria Germany
+            Switzerland Belgium and Netherlands.
           </p>
           <p>
-            Together with institutional and high net worth private partners, Arioso Investment AG invests directly into
-            commercial real estate with clearly defined risk return profiles. The assets are dividend yielding and/or
-            have a long term capital gain perspective.
+            Together with institutional and high net worth private partners, Arioso Investment AG
+            invests directly into commercial real estate with clearly defined risk return profiles.
+            The assets are dividend yielding and/or have a long term capital gain perspective.
           </p>
-          <p>The competence of Arioso Investment AG is based on a highly professional and experienced team.</p>
+          <p>
+            The competence of Arioso Investment AG is based on a highly professional and experienced
+            team.
+          </p>
         </div>
         <div className="right-content">
           <p>
-            Investor seeks, assesses and negotiates direct investments, supports medium-sized businesses in growth
-            phases and safeguards the interests of investors. In conjunction with the business investors, the
-            professional investment team and the expertise made available from a robust network of entrepreneurs,
-            Investor has an enduring commitment to medium-sized businesses.
+            Investor seeks, assesses and negotiates direct investments, supports medium-sized
+            businesses in growth phases and safeguards the interests of investors. In conjunction
+            with the business investors, the professional investment team and the expertise made
+            available from a robust network of entrepreneurs, Investor has an enduring commitment to
+            medium-sized businesses.
           </p>
         </div>
       </div>
@@ -99,10 +104,10 @@ const Home = () => {
       <Note
         image="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/New_York_Skyline_LinkedIn_Background_Photo.png?v=162791207523"
         quote={
-          <i>
-            It is the trust between Investor, entrepreneur <span className="special">&</span> network that is the key to
-            success.
-          </i>
+          <>
+            It is the trust between Investor, entrepreneur <span className="special">&</span>{" "}
+            network that is the key to success.
+          </>
         }
       />
     </div>

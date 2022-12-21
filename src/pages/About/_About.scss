@@ -1,7 +1,7 @@
 .about {
   height: fit-content;
   .hero {
-    @include backgroundObjectImage(100%, 0vh);
+    @include backgroundObjectImage(100%, 50vh);
   }
   .intro-about {
     @include grid(49% 49%);
@@ -17,7 +17,6 @@
 
       p {
         @include paragraphFont;
-        text-align: justify;
       }
     }
   }
@@ -95,6 +94,7 @@
     }
     .card {
       width: 48%;
+
       @include media($md) {
         width: 80%;
       }

@@ -1,0 +1,39 @@
+.team-member-card {
+  background-color: $lightGray;
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  position: relative;
+  @include flex(column, flex-start, center);
+  gap: 1vh;
+  width: 450px;
+  @include media($lg) {
+    width: 400px;
+  }
+  @include media($md) {
+    width: 80%;
+  }
+  @include media($sm) {
+    width: 90%;
+  }
+  @include media($xs) {
+    width: 96%;
+  }
+  @include media($xxs) {
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 550;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  a {
+    @include paragraphFont;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

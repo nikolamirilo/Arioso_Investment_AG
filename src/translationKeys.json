@@ -1,26 +1,61 @@
 {
   "home": {
-    "cards": [],
-    "note": {}
+    "cards": []
   },
   "about": {
-    "cards": [],
-    "note": {}
+    "cards": []
   },
   "contact": {
-    "cards": [],
-    "note": {}
-  },
-  "values": {
-    "cards": [],
-    "note": {}
-  },
-  "services": {
-    "cards": [],
-    "note": {}
+    "cards": []
   },
   "offer": {
-    "cards": [],
-    "note": {}
+    "cards": [
+      {
+        "title": "OfferT1",
+        "text": "OfferP1",
+        "type": "grid"
+      },
+      {
+        "title": "OfferT2",
+        "text": "OfferP2",
+        "type": "grid-reverse"
+      },
+      {
+        "title": "OfferT3",
+        "text": "OfferP3",
+        "type": "grid"
+      }
+    ]
+  },
+  "team": {
+    "cards": []
+  },
+  "privacy_policy": {
+    "paragraphs": [
+      {
+        "title": "PrivacyPolicyT1",
+        "text": "PrivacyPolicyP1"
+      },
+      {
+        "title": "PrivacyPolicyT2",
+        "text": "PrivacyPolicyP2"
+      },
+      {
+        "title": "PrivacyPolicyT3",
+        "text": "PrivacyPolicyP3"
+      },
+      {
+        "title": "PrivacyPolicyT4",
+        "text": "PrivacyPolicyP4"
+      },
+      {
+        "title": "PrivacyPolicyT5",
+        "text": "PrivacyPolicyP5"
+      },
+      {
+        "title": "PrivacyPolicyT6",
+        "text": "PrivacyPolicyP6"
+      }
+    ]
   }
 }

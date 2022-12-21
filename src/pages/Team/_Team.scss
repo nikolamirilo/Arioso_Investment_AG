@@ -1,0 +1,21 @@
+.team {
+  h1 {
+    font-family: $headingFontFamily;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: $darkGray;
+    margin-top: 5vh;
+  }
+  .team-members {
+    @include pageSectionPadding;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 5vh;
+    justify-content: space-around;
+    @include media($md) {
+      @include flex(column, center, center);
+    }
+  }
+}
