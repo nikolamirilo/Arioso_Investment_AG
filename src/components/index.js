@@ -8,3 +8,4 @@ export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as Card } from "./Card/Card";
 export { default as Note } from "./Note/Note";
 export { default as Summary } from "./Summary/Summary";
+export { default as OfferCard } from "./OfferCard/OfferCard";

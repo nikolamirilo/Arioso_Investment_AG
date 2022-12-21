@@ -1,5 +1,40 @@
 //Different font and color
 .note {
-  color: $gray;
-  font-family: $noteFontFamily;
+  @include backgroundObjectImage(100%, 40vh);
+  margin: 10vh 0 15vh 0;
+  position: relative;
+  .quote {
+    background-color: $white;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 1.6rem;
+    width: 70%;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: $gray;
+    padding: 1rem 2rem;
+    @include media($md) {
+      width: 80%;
+    }
+    @include media($sm) {
+      width: 90%;
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
+    }
+    @include media($xs) {
+      width: 98%;
+      padding: 0.2rem 0.5rem;
+      font-size: 1.4rem;
+    }
+    .special {
+      font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.8rem;
+      @include media($sm) {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

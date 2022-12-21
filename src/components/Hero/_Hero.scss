@@ -1,11 +1,7 @@
 .hero {
-  min-height: 90vh;
-  height: fit-content;
-  width: 100%;
   @include backgroundObjectImage(100%, 90vh);
   @include flex(column, flex-start, flex-start);
   padding: 10vh 5vw;
-
   @include media($md) {
     min-height: 80vh;
     @include backgroundObjectImage(100%, 80vh);
@@ -16,6 +12,9 @@
     font-style: italic;
     position: relative;
     left: 1vw;
+    @include media($xs) {
+      left: 0vw;
+    }
   }
   h1 {
     font-family: $headingFontFamily;

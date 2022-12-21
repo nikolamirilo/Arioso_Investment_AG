@@ -1,0 +1,45 @@
+.offer-card,
+.offer-card-reverse {
+  gap: 2%;
+  max-width: 1200px;
+  width: 100%;
+  border-bottom: 2px solid $darkGold;
+  padding: 2vh 0;
+  .left-content {
+    @include flex(column, center, center);
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .right-content {
+    @include flex(column, center, center);
+    gap: 2vh;
+    h3 {
+      font-size: 1.6rem;
+    }
+    p {
+      @include paragraphFont;
+    }
+  }
+}
+.offer-card {
+  @include grid(60% 38%);
+  @include media($lg) {
+    @include grid(50% 48%);
+  }
+  @include media($md) {
+    @include flex(column-reverse, center, center);
+    gap: 2vh;
+  }
+}
+.offer-card-reverse {
+  @include grid(38% 60%);
+  @include media($lg) {
+    @include grid(48% 50%);
+  }
+  @include media($md) {
+    @include flex(column, center, center);
+    gap: 2vh;
+  }
+}

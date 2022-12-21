@@ -10,7 +10,8 @@
     min-height: 100vh;
     height: fit-content;
     padding: 10vh 0 15vh 0;
-    @include media($xs) {
+
+    @include media($md) {
       padding: 8vh 0 40vh 0;
     }
   }

@@ -1,0 +1,22 @@
+.offer {
+  height: fit-content;
+  @include flex(column, center, center);
+  .offer-cards {
+    @include pageSectionPadding;
+    @include flex(column, center, center);
+    gap: 5vh;
+  }
+  .note {
+    @include media($sm) {
+      @include backgroundObjectImage(100%, 50vh);
+    }
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      @include media($xs) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

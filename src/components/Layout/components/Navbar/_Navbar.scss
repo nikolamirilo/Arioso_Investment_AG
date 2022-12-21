@@ -67,11 +67,16 @@
         font-size: $linkFS;
         cursor: pointer;
         font-weight: 500;
-        transition-property: border;
+        transition-property: border, transform;
+        transform: scale(1);
         transition-duration: 100ms;
         transition-timing-function: ease-in;
         &:hover {
           border-bottom: 1px solid $white !important;
+          transform: scale(1.02);
+          @include media($md) {
+            transform: scale(1);
+          }
         }
         &:focus,
         &:active {

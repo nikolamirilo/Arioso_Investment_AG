@@ -3,7 +3,7 @@
   border-radius: 20px;
   padding: 2rem 1rem;
   position: relative;
-  @include flex(column, center, center);
+  @include flex(column, flex-start, center);
   gap: 1vh;
   width: 450px;
   @include media($lg) {
@@ -36,8 +36,32 @@
     font-size: 1.4rem;
     font-family: $headingFontFamily;
     font-weight: 700;
+    text-align: center;
   }
   p {
+    @include paragraphFont;
+  }
+  ul {
+    padding: 0 1vw;
+    @include flex(column, flex-start, flex-start);
+    gap: 1vh;
+    padding: 0 1.5vw;
+    @include media($lg) {
+      padding: 0 2vw;
+    }
+    @include media($md) {
+      padding: 0 2.5vw;
+    }
+    @include media($sm) {
+      padding: 0 3vw;
+    }
+    li {
+      @include paragraphFont;
+    }
+  }
+  span {
+    padding-top: 2vh;
     font-size: $paragraphFS;
+    font-weight: bold;
   }
 }

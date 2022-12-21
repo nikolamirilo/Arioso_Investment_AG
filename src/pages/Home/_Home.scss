@@ -14,7 +14,7 @@
 
       p {
         font-size: $paragraphFS;
-        text-align: justify;
+
         color: $gray;
       }
     }
@@ -26,16 +26,7 @@
     font-weight: 400;
     color: $darkGray;
   }
-  .quote {
-    @include pageSectionPadding;
-    margin-bottom: 5vh;
-    .special {
-      font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 3rem;
-    }
-  }
+
   .services {
     @include pageSectionPadding;
     display: flex;

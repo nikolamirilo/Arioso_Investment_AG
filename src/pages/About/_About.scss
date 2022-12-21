@@ -1,5 +1,8 @@
 .about {
   height: fit-content;
+  .hero {
+    @include backgroundObjectImage(100%, 0vh);
+  }
   .intro-about {
     @include grid(49% 49%);
     gap: 2%;
@@ -13,9 +16,8 @@
       gap: 1vh;
 
       p {
-        font-size: $paragraphFS;
+        @include paragraphFont;
         text-align: justify;
-        color: $gray;
       }
     }
   }
@@ -29,6 +31,8 @@
   .who-we-are {
     @include pageSectionPadding;
     @include flex(column, center, center);
+    border-top: 2px solid $lightGray;
+    margin-top: 5vh;
     gap: 1vh;
     details {
       @include flex(column, center, flex-start);
@@ -45,9 +49,7 @@
       border-radius: 10px;
 
       p {
-        color: $gray;
-        font-size: $paragraphFS;
-        font-family: $fontFamily;
+        @include paragraphFont;
         padding: 1vh 2vw;
         width: 100%;
       }
@@ -61,6 +63,52 @@
           font-size: 1.4rem;
           @include flex(column, center, center);
         }
+      }
+    }
+  }
+  .what-we-want {
+    @include pageSectionPadding;
+    @include flex(column, center, center);
+    border-top: 2px solid $lightGray;
+    margin-top: 5vh;
+    p {
+      width: 80%;
+      @include media($sm) {
+        width: 90%;
+      }
+      @include media($xs) {
+        width: 100%;
+      }
+      @include paragraphFont;
+      text-align: justify;
+    }
+  }
+  .cards {
+    @include pageSectionPadding;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 5vh;
+    justify-content: space-around;
+    @include media($md) {
+      @include flex(column, center, center);
+    }
+    .card {
+      width: 48%;
+      @include media($md) {
+        width: 80%;
+      }
+      @include media($sm) {
+        width: 90%;
+      }
+      @include media($xs) {
+        width: 96%;
+      }
+      @include media($xxs) {
+        width: 100%;
+      }
+      h3 {
+        margin: 1vh 0;
       }
     }
   }
