@@ -62,6 +62,19 @@
         padding: 5rem 0rem 1rem 0;
         gap: 1rem;
       }
+      .languages {
+        @include flex(row, space-around, center);
+        gap: 1vw;
+        span {
+          font-size: 1.6rem;
+          color: $white;
+          font-weight: 400;
+        }
+        div {
+          @include backgroundObjectImage(40px, 20px);
+          cursor: pointer;
+        }
+      }
       button {
         background-color: transparent;
         border: none;

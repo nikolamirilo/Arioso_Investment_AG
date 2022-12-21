@@ -115,20 +115,26 @@ const Navbar = () => {
           >
             Contact
           </button>
-          <button
-            onClick={() => {
-              changeLanguage("en");
-            }}
-          >
-            English
-          </button>
-          <button
-            onClick={() => {
-              changeLanguage("de");
-            }}
-          >
-            German
-          </button>
+          <div className="languages">
+            <div
+              style={{
+                backgroundImage:
+                  "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1024px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png)",
+              }}
+              onClick={() => {
+                changeLanguage("en");
+              }}
+            ></div>
+            <span>|</span>
+            <div
+              style={{
+                backgroundImage: "url(https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg)",
+              }}
+              onClick={() => {
+                changeLanguage("de");
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </nav>

@@ -15,91 +15,33 @@ const Home = () => {
       <Hero
         // image="https://wallpapercave.com/wp/wp7632923.jpg"
         image="https://img.besthqwallpapers.com/Uploads/23-11-2019/112648/london-30-st-mary-axe-swiss-re-building-the-gherkin-city-of-london.jpg"
-        title={t("We are Ariso Investment AG")}
-        subtitle="Leading Investment Company"
+        title={t("HeroTitle")}
+        subtitle={t("HeroSubtitle")}
       />
       <div className="intro-home">
         <div className="left-content">
-          <p>{t("C1")}</p>
-          <p>
-            Together with institutional and high net worth private partners, Arioso Investment AG invests directly into
-            commercial real estate with clearly defined risk return profiles. The assets are dividend yielding and/or
-            have a long term capital gain perspective.
-          </p>
-          <p>The competence of Arioso Investment AG is based on a highly professional and experienced team.</p>
+          <p>{t("HomeP1")}</p>
+          <p>{t("HomeP2")}</p>
+          <p>{t("HomeP3")}</p>
         </div>
         <div className="right-content">
-          <p>
-            Investor seeks, assesses and negotiates direct investments, supports medium-sized businesses in growth
-            phases and safeguards the interests of investors. In conjunction with the business investors, the
-            professional investment team and the expertise made available from a robust network of entrepreneurs,
-            Investor has an enduring commitment to medium-sized businesses.
-          </p>
+          <p>{t("HomeP4")}</p>
         </div>
       </div>
-      <h1>We offer more than money</h1>
+      <h1>{t("ServicesTitle")}</h1>
       <div className="services">
-        <Card
-          icon={<AiOutlineClockCircle size={30} />}
-          title="Investment"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
-        <Card
-          icon={<GiNetworkBars size={30} />}
-          title="Network"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
-        <Card
-          icon={<RxRocket size={30} />}
-          title="Partner"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
-        <Card
-          icon={<MdOutlineVerifiedUser size={30} />}
-          title="Trust"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
-        <Card
-          icon={<FaUserGraduate size={30} color="#fff" />}
-          title="Expertise"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
-        <Card
-          icon={<CgSandClock size={30} />}
-          title="Enduring Nature"
-          text="Investor seeks, assesses and negotiates direct investments, supports medium-sized
-            businesses in growth phases and safeguards the interests of investors. In conjunction
-            with the business investors, the professional investment team and the expertise made
-            available from a robust network of entrepreneurs, Investor has an enduring commitment to
-            medium-sized businesses."
-        />
+        <Card icon={<AiOutlineClockCircle size={30} />} title={t("Investment")} text={t("ServicesC1")} />
+        <Card icon={<GiNetworkBars size={30} />} title={t("Network")} text={t("ServicesC2")} />
+        <Card icon={<RxRocket size={30} />} title={t("Partner")} text={t("ServicesC3")} />
+        <Card icon={<MdOutlineVerifiedUser size={30} />} title={t("Trust")} text={t("ServicesC4")} />
+        <Card icon={<FaUserGraduate size={30} color="#fff" />} title={t("Expertise")} text={t("ServicesC5")} />
+        <Card icon={<CgSandClock size={30} />} title={t("Enduring Nature")} text={t("ServicesC6")} />
       </div>
       <Note
         image="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/New_York_Skyline_LinkedIn_Background_Photo.png?v=162791207523"
         quote={
           <>
-            It is the trust between Investor, entrepreneur <span className="special">&</span> network that is the key to
-            success.
+            {t("HomeNote1")} <span className="special">&</span> {t("HomeNote2")}
           </>
         }
       />
