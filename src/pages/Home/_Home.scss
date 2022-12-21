@@ -13,9 +13,7 @@
       gap: 1vh;
 
       p {
-        font-size: $paragraphFS;
-
-        color: $gray;
+        @include paragraphFont;
       }
     }
   }

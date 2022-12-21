@@ -2,7 +2,8 @@
   height: fit-content;
   width: 90%;
   @include flex(column, space-between, center);
-  border: 2px solid $lightGray;
+  border: 1px solid $lightGray;
+  background-color: rgba(245, 222, 179, 0.103);
   border-radius: 10px;
   gap: 2vh;
   padding: 2rem;
@@ -19,7 +20,7 @@
     text-align: center;
     font-weight: 400;
     color: $darkGray;
-    margin-top: 5vh;
+    margin: 2vh 0;
   }
 
   input {
@@ -28,31 +29,38 @@
     @include paragraphFont;
     border: 1px solid $lightGray;
     padding: 0.4rem 1rem;
-
-    &:focus {
-      border: 1px solid $gray;
+    color: $darkGray;
+    &:focus,
+    &:active {
+      border: 1px solid $lightGray;
       outline: none;
     }
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $darkGray;
   }
   textarea {
     width: 100%;
     border-radius: 10px;
     @include paragraphFont;
     border: 1px solid $lightGray;
+    color: $darkGray;
     padding: 0.4rem 1rem;
     min-height: 20vh;
     height: fit-content;
-    &:focus {
-      border: 1px solid $gray;
+    &:focus,
+    &:active {
+      border: 1px solid $lightGray;
       outline: none;
     }
   }
-  a {
+  button {
     font-family: $fontFamily;
     font-size: $linkFS;
     background-color: $darkGray;
     text-decoration: none;
     color: $white;
+    cursor: pointer;
     border-radius: 10px;
     padding: 0.5rem 2rem;
     &:hover {

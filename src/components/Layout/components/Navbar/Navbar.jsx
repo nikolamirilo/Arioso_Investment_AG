@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
 import { useGlobalState } from "./../../../../context/GlobalContext";
 import { useLocation } from "react-router";
+import { changeLanguage } from "i18next";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -113,6 +114,20 @@ const Navbar = () => {
             }}
           >
             Contact
+          </button>
+          <button
+            onClick={() => {
+              changeLanguage("en");
+            }}
+          >
+            English
+          </button>
+          <button
+            onClick={() => {
+              changeLanguage("de");
+            }}
+          >
+            German
           </button>
         </div>
       </div>
