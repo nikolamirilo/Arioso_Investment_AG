@@ -1,23 +1,29 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CgSandClock } from "react-icons/cg";
 import { FaUserGraduate } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RxRocket } from "react-icons/rx";
-import { Card, Hero, Note } from "../../components";
+import { Loader } from "../../components";
 import { useTranslation } from "react-i18next";
+const Card = React.lazy(() => import("../../components/Card/Card"));
+const Hero = React.lazy(() => import("../../components/Hero/Hero"));
+const Note = React.lazy(() => import("../../components/Note/Note"));
 
 const Home = () => {
   const { t } = useTranslation();
   return (
     <div className="home">
-      <Hero
-        // image="https://wallpapercave.com/wp/wp7632923.jpg"
-        image="https://img.besthqwallpapers.com/Uploads/23-11-2019/112648/london-30-st-mary-axe-swiss-re-building-the-gherkin-city-of-london.jpg"
-        title={t("HeroTitle")}
-        subtitle={t("HeroSubtitle")}
-      />
+      <Suspense fallback={<Loader />}>
+        <Hero
+          // image="https://wallpapercave.com/wp/wp7632923.jpg"
+          image="https://img.besthqwallpapers.com/Uploads/23-11-2019/112648/london-30-st-mary-axe-swiss-re-building-the-gherkin-city-of-london.jpg"
+          title={t("HeroTitle")}
+          subtitle={t("HeroSubtitle")}
+        />
+      </Suspense>
+
       <div className="intro-home">
         <div className="left-content">
           <p>{t("HomeP1")}</p>
