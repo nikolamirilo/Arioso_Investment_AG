@@ -41,17 +41,12 @@
       }
       @include media($xs) {
         width: 100%;
+        padding: 4%;
       }
       border: 2px solid $lightGray;
       padding: 1rem 2rem;
       font-size: $paragraphFS;
       border-radius: 10px;
-
-      p {
-        @include paragraphFont;
-        padding: 1vh 2vw;
-        width: 100%;
-      }
       summary {
         color: $black;
         cursor: pointer;
@@ -62,6 +57,37 @@
           font-size: 1.4rem;
           @include flex(column, center, center);
         }
+      }
+      .details-list {
+        padding: 2% 3.5%;
+        @include media($sm) {
+          padding: 2%;
+        }
+        ul {
+          padding: 1% 3%;
+          @include flex(column, center, center);
+          gap: 0.5vh;
+          @include media($sm) {
+            padding: 1% 5%;
+          }
+          li {
+            @include paragraphFont;
+            width: 100%;
+          }
+        }
+      }
+      .details-note {
+        padding: 3% 3%;
+        width: 100%;
+        @include media($sm) {
+          padding: 5% 2%;
+        }
+      }
+
+      p {
+        @include paragraphFont;
+        padding: 1vh 2vw;
+        width: 100%;
       }
     }
   }

@@ -1,7 +1,111 @@
 {
   "home": {},
   "about": {
-    "cards": []
+    "details": [
+      {
+        "id": 1,
+        "summary": "Philosophy",
+        "paragraphs": ["Details1P1", "Details1P2"]
+      },
+      {
+        "id": 2,
+        "summary": "Business modell",
+        "paragraphs": ["Details2P1", "Details2P2", "Details2P3", "Details2P4", "Details2P5", "Details2P6"],
+        "lists": [
+          {
+            "title": "Investor…",
+            "list_elements": [
+              "D2List1El1",
+              "D2List1El2",
+              "D2List1El3",
+              "D2List1El4",
+              "D2List1El5",
+              "D2List1El6",
+              "D2List1El7",
+              "D2List1El8",
+              "D2List1El9",
+              "D2List1El10",
+              "D2List1El11",
+              "D2List1El12",
+              "D2List1El13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "summary": "Investment criteria",
+        "paragraphs": ["Details3P1"],
+        "lists": [
+          {
+            "title": "",
+            "list_elements": [
+              "D3List1El1",
+              "D3List1El2",
+              "D3List1El3",
+              "D3List1El4",
+              "D3List1El5",
+              "D3List1El6",
+              "D3List1El7",
+              "D3List1El8",
+              "D3List1El9"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "summary": "Requirements on target companies",
+        "paragraphs": ["Details4P1"],
+        "lists": [
+          {
+            "title": "Company and market",
+            "list_elements": ["D4List1El1", "D4List1El2", "D4List1El3"]
+          },
+          {
+            "title": "Competitive advantage",
+            "list_elements": ["D4List2El1", "D4List2El2", "D4List2El3", "D4List2El4"]
+          },
+          {
+            "title": "Team",
+            "list_elements": ["D4List3El1", "D4List3El2", "D4List3El3", "D4List3El4"]
+          },
+          {
+            "title": "Return for the investor",
+            "list_elements": ["D4List4El1", "D4List4El2", "D4List4El3", "D4List4El4", "D4List4El5"]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "summary": "Investment process",
+        "paragraphs": ["Details5P1"],
+        "lists": [
+          {
+            "title": "Selection",
+            "list_elements": ["D5List1El1", "D5List1El2", "D5List1El3"]
+          },
+          {
+            "title": "Investment",
+            "list_elements": ["D5List2El1", "D5List2El2", "D5List2El3", "D5List2El4"]
+          },
+          {
+            "title": "Support",
+            "list_elements": ["D5List3El1", "D5List3El2", "D5List3El3", "D5List3El4", "D5List3El5"]
+          },
+          {
+            "title": "Exit",
+            "list_elements": ["D5List4El1", "D5List4El2", "D5List4El3"]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "summary": "Investment structure",
+        "paragraphs": ["Details6P1", "Details6P2"],
+        "note": "D6Note"
+      }
+    ]
   },
   "contact": {
     "cards": []

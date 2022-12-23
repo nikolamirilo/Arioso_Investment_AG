@@ -5,10 +5,12 @@ import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
 import { useGlobalState } from "./../../../../context/GlobalContext";
 import { useLocation } from "react-router";
 import { changeLanguage } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
   const { width } = useGlobalState();
+  const { t } = useTranslation();
   const location = useLocation();
   const [isActive, setIsActive] = useState({
     home: true,
@@ -69,7 +71,7 @@ const Navbar = () => {
               closeSidebarOnLinkClick();
             }}
           >
-            Home
+            {t("Home")}
           </button>
           <button
             style={{
@@ -80,7 +82,7 @@ const Navbar = () => {
               closeSidebarOnLinkClick();
             }}
           >
-            About Us
+            {t("About Us")}
           </button>
           <button
             style={{
@@ -91,7 +93,7 @@ const Navbar = () => {
               closeSidebarOnLinkClick();
             }}
           >
-            Offer
+            {t("Offer")}
           </button>
           <button
             style={{
@@ -102,7 +104,7 @@ const Navbar = () => {
               closeSidebarOnLinkClick();
             }}
           >
-            Our Team
+            {t("Our Team")}
           </button>
           <button
             style={{
@@ -113,7 +115,7 @@ const Navbar = () => {
               closeSidebarOnLinkClick();
             }}
           >
-            Contact
+            {t("Contact")}
           </button>
           <div className="languages">
             <div
@@ -123,6 +125,7 @@ const Navbar = () => {
               }}
               onClick={() => {
                 changeLanguage("en");
+                window.location.reload();
               }}
             ></div>
             <span>|</span>
@@ -132,6 +135,7 @@ const Navbar = () => {
               }}
               onClick={() => {
                 changeLanguage("de");
+                window.location.reload();
               }}
             ></div>
           </div>
