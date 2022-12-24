@@ -5,7 +5,7 @@ import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
 import { useGlobalState } from "./../../../../context/GlobalContext";
 import england_logo from "../../../../assets/images/navbar/england_logo.webp";
 import german_logo from "../../../../assets/images/navbar/german_logo.webp";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 
