@@ -25,13 +25,5 @@
     @include media($md) {
       width: 96%;
     }
-    .place-card-large {
-      display: none !important;
-    }
-    .gmnoprint {
-      button {
-        display: none !important;
-      }
-    }
   }
 }
