@@ -14,10 +14,13 @@ const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy/PrivacyPoli
 const Error = React.lazy(() => import("./pages/Error/Error"));
 
 const App = () => {
+  const { loading } = useGlobalState();
+  useLoader();
+  if (loading) return <Loader />;
   return (
     <Layout>
       <ScrollToTop>
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback="">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
