@@ -1,16 +1,20 @@
 .hero {
   @include backgroundObjectImage(100%, 90vh);
   @include flex(column, flex-start, flex-start);
-  padding: 10vh 5vw;
+  padding: 12vh 5vw;
+  gap: 2vh;
   @include media($md) {
-    min-height: 80vh;
-    @include backgroundObjectImage(100%, 80vh);
+    @include backgroundObjectImage(100%, 100vh);
+  }
+  .hero::before {
+    filter: brightness(0.6);
   }
   p {
     color: $white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-style: italic;
     position: relative;
+    font-family: $headingFontFamily;
     left: 1vw;
     @include media($xs) {
       left: 0vw;

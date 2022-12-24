@@ -3,6 +3,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
 import { useGlobalState } from "./../../../../context/GlobalContext";
+import england_logo from "../../../../assets/images/navbar/england_logo.webp";
+import german_logo from "../../../../assets/images/navbar/german_logo.webp";
 import { useLocation } from "react-router";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
@@ -120,8 +122,7 @@ const Navbar = () => {
           <div className="languages">
             <div
               style={{
-                backgroundImage:
-                  "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1024px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png)",
+                backgroundImage: `url(${england_logo})`,
               }}
               onClick={() => {
                 changeLanguage("en");
@@ -131,7 +132,7 @@ const Navbar = () => {
             <span>|</span>
             <div
               style={{
-                backgroundImage: "url(https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg)",
+                backgroundImage: `url(${german_logo})`,
               }}
               onClick={() => {
                 changeLanguage("de");

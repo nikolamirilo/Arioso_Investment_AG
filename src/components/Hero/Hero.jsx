@@ -1,7 +1,5 @@
 import React from "react";
 
-//Each page has HERO section - multiple types if needed
-
 const Hero = (props) => {
   return (
     <div className="hero" style={{ backgroundImage: `url(${props.image})` }}>

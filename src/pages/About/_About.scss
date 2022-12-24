@@ -1,7 +1,8 @@
 .about {
   height: fit-content;
   .hero {
-    @include backgroundObjectImage(100%, 50vh);
+    @include backgroundObjectImage(100%, 60vh);
+    filter: brightness(0.8);
   }
   .intro-about {
     @include grid(49% 49%);

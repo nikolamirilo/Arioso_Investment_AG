@@ -4,11 +4,13 @@
   max-width: 1200px;
   width: 100%;
   border-bottom: 2px solid $darkGold;
+  min-height: 40vh;
   padding: 2vh 0;
   .left-content {
     @include flex(column, center, center);
     img {
       max-width: 100%;
+      min-height: 30vh;
       border-radius: 10px;
     }
   }

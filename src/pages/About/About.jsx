@@ -1,17 +1,15 @@
-import { t } from "i18next";
 import React from "react";
 import { BsTelephoneFill } from "react-icons/bs";
 import { Card, Hero } from "../../components";
 import data from "../../translationKeys.json";
+import hero_bg from "../../assets/images/about/about-bg.webp";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="about">
-      <Hero
-        image="https://media.kensingtontours.com/image/upload/g_auto,f_auto,q_auto,w_1366,h_768,c_fill/kt/live/pictures/europe/western/switzerland/itinerary/swiss-exclusive-/bern-switzerland-tours"
-        title=""
-        subtitle=""
-      />
+      <Hero image={hero_bg} title="" subtitle="" />
       <div className="intro-about">
         <div className="left-content">
           <p>{t("AboutUsP1")}</p>
@@ -24,7 +22,7 @@ const About = () => {
       </div>
       <h1>{t("Who We Are")}</h1>
       <div className="who-we-are">
-        {data
+        {data.about.details
           ? data.about.details.map((item, idx) => {
               return (
                 <details key={idx}>
@@ -61,39 +59,28 @@ const About = () => {
         <p>{t("WhatWeWantParagraph")}</p>
       </div>
       <div className="cards">
-        <Card
-          type="about-page"
-          icon={<BsTelephoneFill size={30} />}
-          mention="For entrepreneurs"
-          title="Attractive financing model for companies"
-          list={
-            <ul>
-              <li>Capital injection in the form of equity (EUR 2-20 million)</li>
-              <li>Qualified minority interests as a rule</li>
-              <li>Investment time horizon of around 3-15 years in consultation with the entrepreneur/founder</li>
-              <li>Exclusive group of investors</li>
-              <li>Access to the network: expertise and office holders, where applicable</li>
-              <li>Close monitoring of the company</li>
-              <li>As a rule, only one contact person and only one new shareholder</li>
-              <li>Jointly defined exit perspective</li>
-            </ul>
-          }
-        />
-        <Card
-          type="about-page"
-          icon={<BsTelephoneFill size={30} />}
-          mention="For investors"
-          title="Attractive financing model for companies"
-          list={
-            <ul>
-              <li> Direct investments: no funds, no blind pool</li>
-              <li> Lasting increase in value through careful selection of the companies and active support</li>
-              <li> Freedom of choice on whether and how much to invest</li>
-              <li> Formation of investment companies with half-yearly reporting</li>
-              <li> Operating efficiency through complete coordination of the investments</li>
-            </ul>
-          }
-        />
+        {data.about.cards
+          ? data.about.cards.map((item, idx) => {
+              return (
+                <Card
+                  key={idx}
+                  type="about-page"
+                  icon={<BsTelephoneFill size={30} />}
+                  mention={t(`${item.mention}`)}
+                  title={t(`${item.title}`)}
+                  list={
+                    <ul>
+                      {item.list
+                        ? item.list.map((list_item, idx) => {
+                            return <li key={idx}>{t(`${list_item}`)}</li>;
+                          })
+                        : null}
+                    </ul>
+                  }
+                />
+              );
+            })
+          : null}
       </div>
     </div>
   );

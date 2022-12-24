@@ -1,6 +1,9 @@
 import React from "react";
+import data from "../../translationKeys.json";
+import { useTranslation } from "react-i18next";
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
   return (
     <div className="privacy-policy">
       <div className="top-content">
@@ -35,6 +38,18 @@ const PrivacyPolicy = () => {
           <p>Samstag: 8:00 – 15:00 Uhr</p>
           <p>Sonntag: Geschlossen</p>
         </div>
+      </div>
+      <div className="bottom-content">
+        {data.privacy_policy.paragraphs
+          ? data.privacy_policy.paragraphs.map((item, idx) => {
+              return (
+                <div className="term" key={idx}>
+                  <h3>{t(`${item.title}`)}</h3>
+                  <p>{t(`${item.text}`)}</p>
+                </div>
+              );
+            })
+          : null}
       </div>
     </div>
   );

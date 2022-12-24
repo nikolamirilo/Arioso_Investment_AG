@@ -2,6 +2,7 @@
   @include pageSectionPadding;
   .top-content {
     width: 100%;
+    margin-bottom: 3%;
     @include flex(column, center, center);
     gap: 2vh;
     h3 {
@@ -31,6 +32,19 @@
         li {
           @include paragraphFont;
         }
+      }
+    }
+  }
+  .bottom-content {
+    margin-bottom: 5%;
+    width: 100%;
+    @include flex(column, center, center);
+    gap: 4vh;
+    .term {
+      @include flex(column, flex-start, flex-start);
+      gap: 1vh;
+      p {
+        @include paragraphFont;
       }
     }
   }

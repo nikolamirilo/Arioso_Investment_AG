@@ -105,59 +105,75 @@
         "paragraphs": ["Details6P1", "Details6P2"],
         "note": "D6Note"
       }
+    ],
+    "cards": [
+      {
+        "mention": "Für Unternehmer",
+        "title": "Attraktives Finanzierungsmodell für Unternehmen",
+        "list": [
+          "CardList1El1",
+          "CardList1El2",
+          "CardList1El3",
+          "CardList1El4",
+          "CardList1El5",
+          "CardList1El6",
+          "CardList1El7",
+          "CardList1El8"
+        ]
+      },
+      {
+        "mention": "Für Investoren",
+        "title": "Attraktive Investitionsmöglichkeiten in Form von Privatplatzierungen",
+        "list": ["CardList2El1", "CardList2El2", "CardList2El3", "CardList2El4", "CardList2El5"]
+      }
     ]
   },
-  "contact": {
-    "cards": []
-  },
+
   "offer": {
     "cards": [
       {
-        "title": "OfferT1",
-        "text": "OfferP1",
+        "title": "OfferCard1T",
+        "text": "OfferCard1P",
         "type": "grid"
       },
       {
-        "title": "OfferT2",
-        "text": "OfferP2",
+        "title": "OfferCard2T",
+        "text": "OfferCard2P",
         "type": "grid-reverse"
       },
       {
-        "title": "OfferT3",
-        "text": "OfferP3",
+        "title": "OfferCard3T",
+        "text": "OfferCard3P",
         "type": "grid"
+      },
+      {
+        "title": "OfferCard4T",
+        "text": "OfferCard4P",
+        "type": "grid-reverse"
+      }
+    ]
+  },
+
+  "privacy_policy": {
+    "paragraphs": [
+      {
+        "title": "PrivacyPolicy1T",
+        "text": "PrivacyPolicy1P"
+      },
+      {
+        "title": "PrivacyPolicy2T",
+        "text": "PrivacyPolicy2P"
+      },
+      {
+        "title": "PrivacyPolicy3T",
+        "text": "PrivacyPolicy3P"
       }
     ]
   },
   "team": {
     "cards": []
   },
-  "privacy_policy": {
-    "paragraphs": [
-      {
-        "title": "PrivacyPolicyT1",
-        "text": "PrivacyPolicyP1"
-      },
-      {
-        "title": "PrivacyPolicyT2",
-        "text": "PrivacyPolicyP2"
-      },
-      {
-        "title": "PrivacyPolicyT3",
-        "text": "PrivacyPolicyP3"
-      },
-      {
-        "title": "PrivacyPolicyT4",
-        "text": "PrivacyPolicyP4"
-      },
-      {
-        "title": "PrivacyPolicyT5",
-        "text": "PrivacyPolicyP5"
-      },
-      {
-        "title": "PrivacyPolicyT6",
-        "text": "PrivacyPolicyP6"
-      }
-    ]
+  "contact": {
+    "cards": []
   }
 }

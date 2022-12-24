@@ -7,6 +7,7 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RxRocket } from "react-icons/rx";
 import { Loader } from "../../components";
 import { useTranslation } from "react-i18next";
+import hero_bg from "../../assets/images/home/home-bg-dark.webp";
 const Card = React.lazy(() => import("../../components/Card/Card"));
 const Hero = React.lazy(() => import("../../components/Hero/Hero"));
 const Note = React.lazy(() => import("../../components/Note/Note"));
@@ -18,9 +19,9 @@ const Home = () => {
       <Suspense fallback={<Loader />}>
         <Hero
           // image="https://wallpapercave.com/wp/wp7632923.jpg"
-          image="https://img.besthqwallpapers.com/Uploads/23-11-2019/112648/london-30-st-mary-axe-swiss-re-building-the-gherkin-city-of-london.jpg"
-          title={t("HeroTitle")}
-          subtitle={t("HeroSubtitle")}
+          image={hero_bg}
+          title={t("HomeTitle")}
+          subtitle={t("HomeSubtitle")}
         />
       </Suspense>
 
