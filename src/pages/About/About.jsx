@@ -14,14 +14,14 @@ const About = () => {
         <div className="left-content">
           <p>{t("AboutUsP1")}</p>
           <p>{t("AboutUsP2")}</p>
-          <p>{t("AboutUsP3")}</p>
         </div>
         <div className="right-content">
-          <p>{t("AboutUsP4")}</p>
+          <p>{t("AboutUsP3")}</p>
         </div>
       </div>
       <h1>{t("Who We Are")}</h1>
       <div className="who-we-are">
+        <p>{t("We are")}</p>
         {data.about.details
           ? data.about.details.map((item, idx) => {
               return (

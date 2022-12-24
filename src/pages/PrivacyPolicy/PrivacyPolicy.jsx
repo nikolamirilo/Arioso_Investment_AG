@@ -8,35 +8,33 @@ const PrivacyPolicy = () => {
     <div className="privacy-policy">
       <div className="top-content">
         <div className="group">
-          <h3> Novak-Immobilien-investment s.r.o.</h3>
-          <p> Vienna Gate – Kopčianska 10</p>
-          <p> Bratislava – mestská časť Petržalka 851 01 </p>
+          <h3>Arioso Investment AG</h3>
+          <p>Grafenauenweg 10</p>
+          <p>{t("Switzerland")} - 6300 Zug </p>
         </div>
         <div className="group">
-          <h3>ID: 51 334 054</h3>
-          <h3>VAT: SK2120676910</h3>
-          <h3>IBAN:SK87 1122 0000 0018 0750 8008</h3>
-          <h3>SWIFT: UNCRSKBX</h3>
+          <p>AKTIENGESELLSCHAFT (AG)</p>
+          <p>{t("Company Registration Number")}: CH-170.3.038.269-9</p>
+          <p>UID/MWST-: CHE-432.401.026</p>
         </div>
         <div className="group">
-          <a href="mailto:">email:info@novak-immobilien-investment.com</a>
-          <p>Telefon:</p>
-          <p>Fax: 00421-24341 2630</p>
+          <p>{t("Telefon")}: 321219 2109</p>
+          <p>{t("Fax")}: 10021 2918</p>
+          <p>
+            {t("Email")}: <a href="mailto:"> info@arioso-ag.ch </a>
+          </p>
         </div>
         <div className="group">
-          <h3> Unser Team besteht aus</h3>
-          <ol>
-            <li>Executive Director</li>
-            <li>Office Lady</li>
-            <li>Manager</li>
-            <li>Partner</li>
-          </ol>
-        </div>
-        <div className="group">
-          <h3> Um Terminvereinbarung wird gebeten</h3>
-          <p>Montag – Freitag: 8:00 – 17:00 Uhr</p>
-          <p>Samstag: 8:00 – 15:00 Uhr</p>
-          <p>Sonntag: Geschlossen</p>
+          <h3>{t("Working time")}</h3>
+          <p>
+            {t("Monday")} – {t("Friday")}: 8:00 – 17:00 {t("hour")}
+          </p>
+          <p>
+            {t("Saturday")}: 8:00 – 15:00 {t("hour")}
+          </p>
+          <p>
+            {t("Sunday")}: {t("Closed")}
+          </p>
         </div>
       </div>
       <div className="bottom-content">

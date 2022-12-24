@@ -108,8 +108,8 @@
     ],
     "cards": [
       {
-        "mention": "Für Unternehmer",
-        "title": "Attraktives Finanzierungsmodell für Unternehmen",
+        "mention": "For entrepreneurs",
+        "title": "Attractive financing model for companies",
         "list": [
           "CardList1El1",
           "CardList1El2",
@@ -122,8 +122,8 @@
         ]
       },
       {
-        "mention": "Für Investoren",
-        "title": "Attraktive Investitionsmöglichkeiten in Form von Privatplatzierungen",
+        "mention": "For Investors",
+        "title": "Attractive investment opportunities in the form of private placements",
         "list": ["CardList2El1", "CardList2El2", "CardList2El3", "CardList2El4", "CardList2El5"]
       }
     ]
