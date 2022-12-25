@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "../../components";
+import { Form, Modal } from "../../components";
 import Map from "./../../components/Map/Map";
 import { useTranslation } from "react-i18next";
 
@@ -44,6 +44,7 @@ const Contact = () => {
         </div>
       </div>
       <Map />
+      <Modal />
     </div>
   );
 };

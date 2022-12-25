@@ -45,6 +45,7 @@
     @include paragraphFont;
     border: 1px solid $lightGray;
     color: $darkGray;
+    resize: none;
     padding: 0.4rem 1rem;
     min-height: 20vh;
     height: fit-content;

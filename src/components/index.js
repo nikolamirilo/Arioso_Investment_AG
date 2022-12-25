@@ -11,3 +11,4 @@ export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as Summary } from "./Summary/Summary";
 export { default as TeamMemberCard } from "./TeamMemberCard/TeamMemberCard";
 export { default as DetailsSection } from "./DetailsSection/DetailsSection";
+export { default as Modal } from "./Modal/Modal";

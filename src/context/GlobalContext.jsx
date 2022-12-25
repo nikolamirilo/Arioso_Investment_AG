@@ -9,6 +9,7 @@ export const useGlobalState = () => {
 export const GlobalStateProvider = ({ children }) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [loading, setLoading] = useState(true);
+  const [isFormSubmited, setIsFormSubmited] = useState(false);
 
   const setDimension = () => {
     setWidth(window.innerWidth);
@@ -30,6 +31,8 @@ export const GlobalStateProvider = ({ children }) => {
         contactSection,
         loading,
         setLoading,
+        isFormSubmited,
+        setIsFormSubmited,
       }}
     >
       {children}

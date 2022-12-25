@@ -1,64 +1,34 @@
-import React, { useReducer } from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import { useGlobalState } from "./../../context/GlobalContext";
 
 const Form = () => {
   const { t } = useTranslation();
-  const initialEmailState = { name: "", address: "", subject: "", message: "" };
-  const navigate = useNavigate();
-  const [email, setEmail] = useReducer(
-    (email, updates) => ({
-      ...email,
-      ...updates,
-    }),
-    initialEmailState
-  );
-  const submitForm = () => {
-    window.location.href = `mailto:nikolamirilo@gmail.com?subject=${email.subject}&body=${email.message}`;
-    alert("Thank you for your interest!");
-    navigate("/contact");
+  const form = useRef();
+  const { setIsFormSubmited } = useGlobalState();
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("service_q35w8te", "template_hsds2ym", form.current, "5wkjNpw50CAxhbG6P").then(
+      (result) => {
+        setIsFormSubmited(true);
+        console.log(result);
+      },
+      (error) => {
+        alert(`Error`);
+        console.log(error);
+      }
+    );
   };
   return (
-    <form className="form" name="contact" mathod="POST">
+    <form className="form" ref={form} onSubmit={submitForm}>
       <h1>{t("Contact Us")}</h1>
-      <input type="hidden" name="form-name" value="contact" />
-      <input
-        type="text"
-        placeholder={t("Enter your name*")}
-        required={true}
-        name="name"
-        onChange={(e) => {
-          setEmail({ name: e.target.value });
-        }}
-      />
-      <input
-        type="email"
-        placeholder={t("Enter your email address*")}
-        required={true}
-        name="email"
-        onChange={(e) => {
-          setEmail({ address: e.target.value });
-        }}
-      />
-      <input
-        type="text"
-        placeholder={t("Subject*")}
-        required={true}
-        name="subject"
-        onChange={(e) => {
-          setEmail({ subject: e.target.value });
-        }}
-      />
-      <textarea
-        type="text"
-        style={{ resize: "none" }}
-        required={true}
-        name="message"
-        onChange={(e) => {
-          setEmail({ message: e.target.value });
-        }}
-        placeholder={t("Enter your message*")}
-      ></textarea>
+      <input type="hidden" value="contact" />
+      <input type="text" placeholder={t("Enter your name*")} name="name" required={true} />
+      <input type="email" placeholder={t("Enter your email address*")} name="email" required={true} />
+      <input type="text" placeholder={t("Subject*")} name="subject" required={true} />
+      <textarea type="text" required={true} name="message" placeholder={t("Enter your message*")}></textarea>
       <button type="submit">{t("Send")}</button>
     </form>
   );
