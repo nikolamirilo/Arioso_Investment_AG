@@ -1,5 +1,6 @@
 .about {
   height: fit-content;
+  @include pageAnimation;
   .hero {
     @include backgroundObjectImage(100%, 60vh);
     filter: brightness(0.8);

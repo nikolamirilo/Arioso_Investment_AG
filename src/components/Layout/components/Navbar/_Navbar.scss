@@ -11,6 +11,7 @@
   position: fixed;
   max-height: 50vh;
   top: 0;
+  @include pageAnimation;
   @include flex(row, space-between, center);
   padding: 1vh 5vw;
   @include media($md) {

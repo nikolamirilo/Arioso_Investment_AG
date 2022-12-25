@@ -1,13 +1,5 @@
 //Fonts
-@font-face {
-  font-family: "Euclid Circual A Regular";
-  src: local("Euclid Circual A Regular"), url("../fonts/Euclid-Circular-A-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Euclid Circual A Bold";
-  src: local("Euclid Circual A Bold"), url("../fonts/Euclid-Circular-A-Bold.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito&family=Roboto&display=swap");
 //Colors
 $black: #000;
 $white: #fff;
@@ -27,9 +19,9 @@ $lg: 1200px;
 $xl: 1400px;
 $xxl: 2000px;
 //fontFamily
-$fontFamily: Euclid Circual A Regular, sans-serif;
-$headingFontFamily: Euclid Circual Bold Regular, sans-serif;
-$noteFontFamily: Euclid Circual A Regular, sans-serif;
+$fontFamily: "Roboto", sans-serif;
+$headingFontFamily: "Roboto", sans-serif;
+$noteFontFamily: "Roboto", sans-serif;
 //Font Size
 $linkFS: 1.4rem;
 $paragraphFS: 1.2rem;

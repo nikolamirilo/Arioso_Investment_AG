@@ -1,18 +1,20 @@
 .team {
+  @include pageAnimation;
+  min-height: 80vh;
   h1 {
     font-family: $headingFontFamily;
     font-size: 2.5rem;
     text-align: center;
     font-weight: 400;
     color: $darkGray;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
   .team-members {
     @include pageSectionPadding;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    row-gap: 5vh;
+    row-gap: 10vh;
     justify-content: space-around;
     @include media($md) {
       @include flex(column, center, center);

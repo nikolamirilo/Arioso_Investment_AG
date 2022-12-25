@@ -2,6 +2,7 @@
   height: fit-content;
   @include flex(column, center, center);
   padding-bottom: 5vh;
+  @include pageAnimation;
   .top-content {
     width: 100%;
     @include grid(60% 38%);
