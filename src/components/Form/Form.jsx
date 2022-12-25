@@ -19,7 +19,7 @@ const Form = () => {
     navigate("/contact");
   };
   return (
-    <form className="form" name="contact">
+    <form className="form" name="contact" mathod="POST">
       <h1>{t("Contact Us")}</h1>
       <input
         type="text"

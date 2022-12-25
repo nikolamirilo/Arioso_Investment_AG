@@ -23,12 +23,11 @@
     <title>Arioso Investment AG</title>
   </head>
   <body>
-    <form className="form" action="submit" name="contact" style="display: none" data-netlify="true" method="POST">
+    <form className="form" name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="text" name="subject" />
       <textarea type="text" name="message"></textarea>
-      <button type="submit">Send</button>
     </form>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx"></script>
