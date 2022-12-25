@@ -16,22 +16,25 @@ const Error = React.lazy(() => import("./pages/Error/Error"));
 const App = () => {
   const { loading } = useGlobalState();
   useLoader();
-  if (loading) return <Loader />;
   return (
     <Layout>
-      <ScrollToTop>
+      {loading ? (
+        <Loader />
+      ) : (
         <Suspense fallback="">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<About />} />
-            <Route path="/offer" element={<Offer />} />
-            <Route path="/our-team" element={<Team />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/*" element={<Error />} />
-          </Routes>
+          <ScrollToTop>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<About />} />
+              <Route path="/offer" element={<Offer />} />
+              <Route path="/our-team" element={<Team />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/*" element={<Error />} />
+            </Routes>
+          </ScrollToTop>
         </Suspense>
-      </ScrollToTop>
+      )}
     </Layout>
   );
 };

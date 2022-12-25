@@ -5,7 +5,7 @@ const Loader = () => {
   const { width } = useGlobalState();
   return (
     <div className="loader">
-      <HashLoader size={width > 600 ? 50 : 40} />
+      <HashLoader size={width > 600 ? 55 : 45} />
     </div>
   );
 };

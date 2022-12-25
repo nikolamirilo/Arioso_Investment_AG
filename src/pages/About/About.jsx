@@ -4,6 +4,7 @@ import { Card, Hero } from "../../components";
 import data from "../../translationKeys.json";
 import hero_bg from "../../assets/images/about/about-bg.webp";
 import { useTranslation } from "react-i18next";
+import { DetailsSection } from "../../components";
 
 const About = () => {
   const { t } = useTranslation();
@@ -20,40 +21,7 @@ const About = () => {
         </div>
       </div>
       <h1>{t("Who We Are")}</h1>
-      <div className="who-we-are">
-        <p>{t("We are")}</p>
-        {data.about.details
-          ? data.about.details.map((item, idx) => {
-              return (
-                <details key={idx}>
-                  <summary>{t(`${item.summary}`)}</summary>
-                  {item.paragraphs
-                    ? item.paragraphs.map((paragraph, idx) => {
-                        return <p key={idx}>{t(`${paragraph}`)}</p>;
-                      })
-                    : null}
-                  {item.lists
-                    ? item.lists.map((list, idx) => {
-                        return (
-                          <div key={idx} className="details-list">
-                            {list.title ? <h4>{t(`${list.title}`)}</h4> : null}
-                            <ul>
-                              {list.list_elements
-                                ? list.list_elements.map((list_el, idx) => {
-                                    return <li key={idx}>{t(`${list_el}`)}</li>;
-                                  })
-                                : null}
-                            </ul>
-                          </div>
-                        );
-                      })
-                    : null}
-                  {item.note ? <h4 className="details-note">{t(`${item.note}`)}</h4> : null}
-                </details>
-              );
-            })
-          : null}
-      </div>
+      <DetailsSection />
       <h1>{t("What we want")}</h1>
       <div className="what-we-want">
         <p>{t("WhatWeWantParagraph")}</p>

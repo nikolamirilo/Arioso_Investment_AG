@@ -4,8 +4,9 @@ import { useGlobalState } from "./../context/GlobalContext";
 export const useLoader = () => {
   const { setLoading } = useGlobalState();
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1200);
+    let timer = setTimeout(() => setLoading(false), 2000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 };

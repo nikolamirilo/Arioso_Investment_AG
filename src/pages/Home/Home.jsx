@@ -5,26 +5,15 @@ import { FaUserGraduate } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RxRocket } from "react-icons/rx";
-import { Loader } from "../../components";
+import { Hero, Note, Card } from "../../components";
 import { useTranslation } from "react-i18next";
 import hero_bg from "../../assets/images/home/home-bg-dark.webp";
-const Card = React.lazy(() => import("../../components/Card/Card"));
-const Hero = React.lazy(() => import("../../components/Hero/Hero"));
-const Note = React.lazy(() => import("../../components/Note/Note"));
 
 const Home = () => {
   const { t } = useTranslation();
   return (
     <div className="home">
-      <Suspense fallback={<Loader />}>
-        <Hero
-          // image="https://wallpapercave.com/wp/wp7632923.jpg"
-          image={hero_bg}
-          title={t("HomeTitle")}
-          subtitle={t("HomeSubtitle")}
-        />
-      </Suspense>
-
+      <Hero image={hero_bg} title={t("HomeTitle")} subtitle={t("HomeSubtitle")} />
       <div className="intro-home">
         <div className="left-content">
           <p>{t("HomeP1")}</p>

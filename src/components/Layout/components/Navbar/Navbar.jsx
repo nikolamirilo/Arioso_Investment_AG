@@ -125,8 +125,8 @@ const Navbar = () => {
                 backgroundImage: `url(${england_logo})`,
               }}
               onClick={() => {
-                changeLanguage("en");
                 window.location.reload();
+                changeLanguage("en");
               }}
             ></div>
             <span>|</span>
@@ -135,8 +135,8 @@ const Navbar = () => {
                 backgroundImage: `url(${german_logo})`,
               }}
               onClick={() => {
-                changeLanguage("de");
                 window.location.reload();
+                changeLanguage("de");
               }}
             ></div>
           </div>
