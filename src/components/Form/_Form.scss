@@ -2,8 +2,8 @@
   height: fit-content;
   width: 90%;
   @include flex(column, space-between, center);
-  border: 1px solid $lightGray;
-  background-color: rgba(245, 222, 179, 0.103);
+  background-color: #fafafa;
+  @include boxShadow;
   border-radius: 10px;
   gap: 2vh;
   padding: 2rem;

@@ -5,7 +5,7 @@
   @include pageAnimation;
   .top-content {
     width: 100%;
-    @include grid(60% 38%);
+    @include grid(65% 33%);
     gap: 2%;
     @include pageSectionPadding;
     @include media($md) {

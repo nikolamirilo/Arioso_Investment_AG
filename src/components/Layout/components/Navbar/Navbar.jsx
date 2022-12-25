@@ -30,7 +30,7 @@ const Navbar = () => {
     }
   };
   const closeSidebarOnLinkClick = () => {
-    if (width < 1000) {
+    if (width <= 1000) {
       setIsClicked(false);
     }
   };
@@ -47,6 +47,12 @@ const Navbar = () => {
       setIsActive({ contact: true });
     }
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (width <= 1000) {
+      setIsActive(false);
+    }
+  }, []);
 
   return (
     <nav className="navbar">

@@ -7,13 +7,15 @@ const Form = () => {
   const { t } = useTranslation();
   const form = useRef();
   const { setIsFormSubmited } = useGlobalState();
+  const service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-  const submitForm = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm("service_q35w8te", "template_hsds2ym", form.current, "5wkjNpw50CAxhbG6P").then(
+    emailjs.sendForm(service_id, template_id, form.current, public_key).then(
       (result) => {
         setIsFormSubmited(true);
-        console.log(result);
       },
       (error) => {
         alert(`Error`);
@@ -22,7 +24,7 @@ const Form = () => {
     );
   };
   return (
-    <form className="form" ref={form} onSubmit={submitForm}>
+    <form className="form" ref={form} onSubmit={handleFormSubmit}>
       <h1>{t("Contact Us")}</h1>
       <input type="hidden" value="contact" />
       <input type="text" placeholder={t("Enter your name*")} name="name" required={true} />
