@@ -21,6 +21,7 @@ const Form = () => {
   return (
     <form className="form" name="contact" mathod="POST">
       <h1>{t("Contact Us")}</h1>
+      <input type="hidden" name="form-name" value="contact" />
       <input
         type="text"
         placeholder={t("Enter your name*")}
