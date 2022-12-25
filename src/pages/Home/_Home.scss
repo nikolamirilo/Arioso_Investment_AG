@@ -1,6 +1,6 @@
 .home {
   height: fit-content;
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   .intro-home {
     @include grid(49% 49%);
     gap: 2%;

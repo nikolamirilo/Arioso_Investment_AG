@@ -1,6 +1,6 @@
 .about {
   height: fit-content;
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   .hero {
     @include backgroundObjectImage(100%, 60vh);
     filter: brightness(0.8);
@@ -59,7 +59,7 @@
     }
     .card {
       width: 48%;
-
+      min-height: 50vh;
       @include media($md) {
         width: 80%;
       }

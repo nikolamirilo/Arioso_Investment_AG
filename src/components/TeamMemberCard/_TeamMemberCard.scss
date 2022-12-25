@@ -3,6 +3,7 @@
   border-radius: 20px;
   padding: 2rem 1rem;
   position: relative;
+  @include boxShadow;
   @include flex(column, flex-start, center);
   gap: 1vh;
   width: 450px;

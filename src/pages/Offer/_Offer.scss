@@ -1,7 +1,7 @@
 .offer {
   height: fit-content;
   @include flex(column, center, center);
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   .offer-cards {
     @include pageSectionPadding;
     @include flex(column, center, center);

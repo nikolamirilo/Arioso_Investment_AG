@@ -2,7 +2,7 @@
   height: fit-content;
   @include flex(column, center, center);
   padding-bottom: 5vh;
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   .top-content {
     width: 100%;
     @include grid(65% 33%);
@@ -10,7 +10,13 @@
     @include pageSectionPadding;
     @include media($md) {
       @include flex(column, center, center);
+      width: 100%;
       gap: 5vh;
+    }
+    .right-content {
+      @include media($xs) {
+        padding: 0 2vw;
+      }
     }
     .left-content,
     .right-content {

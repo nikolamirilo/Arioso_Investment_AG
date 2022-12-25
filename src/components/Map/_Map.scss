@@ -5,12 +5,15 @@
   @include pageSectionPadding;
   gap: 5vh;
   h1 {
-    @include flex(row, center, center);
     font-family: $headingFontFamily;
     font-size: 2.2rem;
     text-align: center;
     font-weight: 400;
     color: $darkGray;
+    .swiss-logo {
+      position: relative;
+      top: 0.4rem;
+    }
   }
   iframe {
     min-height: 60vh;
@@ -20,10 +23,10 @@
       width: 80%;
     }
     @include media($sm) {
-      width: 90%;
-    }
-    @include media($md) {
       width: 96%;
+    }
+    @include media($xs) {
+      width: 100%;
     }
   }
 }

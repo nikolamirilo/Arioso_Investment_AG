@@ -28,7 +28,7 @@
 @mixin pageSectionPadding {
   padding: 10vh 10vw;
   @include media($xs) {
-    padding: 10vh 4vw;
+    padding: 10vh 2vw;
   }
 }
 @mixin paragraphFont {
@@ -36,14 +36,13 @@
   color: $gray;
   font-family: $fontFamily;
 }
-@mixin pageAnimation {
+@mixin fadeAnimation($duration, $delay) {
   opacity: 0;
-  animation: fade 0.3s ease-in 0.3s forwards;
+  animation: fade $duration ease-in $delay forwards;
 }
-@mixin textAnimation($duration) {
+@mixin slideInAnimation($duration, $delay) {
   opacity: 0;
-  animation-delay: 0.3s;
-  animation: slideIn $duration ease-in-out $duration forwards;
+  animation: slideIn $duration ease-in-out $delay forwards;
 }
 @mixin boxShadow {
   border-radius: 10px;

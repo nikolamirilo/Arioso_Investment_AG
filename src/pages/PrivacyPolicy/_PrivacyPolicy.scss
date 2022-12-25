@@ -1,6 +1,6 @@
 .privacy-policy {
   @include pageSectionPadding;
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   .top-content {
     width: 100%;
     margin-bottom: 3%;

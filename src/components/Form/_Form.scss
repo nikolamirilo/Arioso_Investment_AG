@@ -47,8 +47,11 @@
     color: $darkGray;
     resize: none;
     padding: 0.4rem 1rem;
-    min-height: 20vh;
+    min-height: 25vh;
     height: fit-content;
+    @include media($xs) {
+      min-height: 25vh;
+    }
     &:focus,
     &:active {
       border: 1px solid $lightGray;

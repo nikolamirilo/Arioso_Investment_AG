@@ -5,6 +5,7 @@
   height: fit-content;
   min-height: 30vh;
   position: relative;
+  @include boxShadow;
   @include flex(column, flex-start, center);
   gap: 1vh;
   width: 450px;

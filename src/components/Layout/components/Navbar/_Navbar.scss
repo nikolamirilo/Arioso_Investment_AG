@@ -11,7 +11,7 @@
   position: fixed;
   max-height: 50vh;
   top: 0;
-  @include pageAnimation;
+  @include fadeAnimation(0.4s, 0.1s);
   @include flex(row, space-between, center);
   padding: 1vh 5vw;
   @include media($md) {
@@ -42,15 +42,9 @@
       border: none;
       position: fixed;
       cursor: pointer;
-      top: 1rem;
+      top: 2.5vh;
       right: 2vw;
       color: $white;
-      transition-property: transform;
-      transition-duration: 200ms;
-      transition-timing-function: ease-in;
-      &:active {
-        transform: rotate(360deg);
-      }
     }
     .links {
       @include flex(row, space-around, center);
