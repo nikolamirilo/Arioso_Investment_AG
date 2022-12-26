@@ -4,6 +4,9 @@
   .hero {
     @include backgroundObjectImage(100%, 60vh);
     filter: brightness(0.8);
+    .heading {
+      display: none;
+    }
   }
   .intro-about {
     @include grid(49% 49%);
