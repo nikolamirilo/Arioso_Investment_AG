@@ -18,20 +18,21 @@ const OfferCard = (props) => {
         </div>
       ) : props.type === "grid-reverse" ? (
         <div className="right-content">
-          <h3>{props.title}</h3>
           <div className="icon">
             <BsBuilding size={40} />
           </div>
+          <h3>{props.title}</h3>
+
           <p>{props.text}</p>
         </div>
       ) : null}
 
       {props.type === "grid" ? (
         <div className="right-content">
-          <h3>{props.title}</h3>
           <div className="icon">
             <BsBuilding size={40} />
           </div>
+          <h3>{props.title}</h3>
           <p>{props.text}</p>
         </div>
       ) : props.type === "grid-reverse" ? (

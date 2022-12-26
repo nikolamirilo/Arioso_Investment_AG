@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { changeLanguage } from "i18next";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../../assets/images/logos/logo-transparent-gold.png";
-import { useGlobalState } from "./../../../../context/GlobalContext";
 import england_logo from "../../../../assets/images/navbar/england_logo.webp";
 import german_logo from "../../../../assets/images/navbar/german_logo.webp";
-import { useLocation } from "react-router-dom";
-import { changeLanguage } from "i18next";
-import { useTranslation } from "react-i18next";
+import { useGlobalState } from "./../../../../context/GlobalContext";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -55,7 +54,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={isActive ? "navbar active" : "navbar inactive"}>
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
