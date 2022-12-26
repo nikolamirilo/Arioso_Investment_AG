@@ -27,14 +27,5 @@
       padding: 0.2rem 0.5rem;
       font-size: 1.4rem;
     }
-    .special {
-      font-family: $fontFamily;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 1.8rem;
-      @include media($sm) {
-        font-size: 1.6rem;
-      }
-    }
   }
 }

@@ -1,6 +1,7 @@
 .about {
   height: fit-content;
   @include fadeAnimation(0.4s, 0.1s);
+  @include flex(column, center, center);
   .hero {
     @include backgroundObjectImage(100%, 60vh);
     filter: brightness(0.8);

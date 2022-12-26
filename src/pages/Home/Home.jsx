@@ -37,7 +37,7 @@ const Home = () => {
         image="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/New_York_Skyline_LinkedIn_Background_Photo.png?v=162791207523"
         quote={
           <>
-            {t("HomeNote1")} <span className="special">&</span> {t("HomeNote2")}
+            {t("HomeNote1")} & {t("HomeNote2")}
           </>
         }
       />

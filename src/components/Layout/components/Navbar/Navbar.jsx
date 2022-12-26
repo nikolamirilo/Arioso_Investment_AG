@@ -25,12 +25,8 @@ const Navbar = () => {
   const handleHamburgerClick = () => {
     if (isClicked) {
       nav.classList.remove("active");
-      setIsClicked(false);
     } else {
       nav.classList.toggle("active");
-      setTimeout(() => {
-        setIsClicked(true);
-      }, 300);
     }
   };
   const closeSidebarOnLinkClick = () => {
@@ -82,7 +78,7 @@ const Navbar = () => {
           </button>
         )}
 
-        <div className="links" style={{ display: !isClicked && width < 1000 ? "none" : null }}>
+        <div className="links">
           <button
             style={{ borderBottom: isActive.home ? "1px solid #ffff" : "none" }}
             onClick={() => {

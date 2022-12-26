@@ -1,5 +1,6 @@
 .team {
   @include fadeAnimation(0.4s, 0.1s);
+  @include flex(column, center, center);
   min-height: 80vh;
   h1 {
     font-family: $headingFontFamily;
