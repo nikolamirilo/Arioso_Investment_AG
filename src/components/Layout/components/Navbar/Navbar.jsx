@@ -21,18 +21,25 @@ const Navbar = () => {
     contact: false,
   });
   const navigate = useNavigate();
+  var nav = document.querySelector(".navbar");
   const handleHamburgerClick = () => {
     if (isClicked) {
+      nav.classList.remove("active");
       setIsClicked(false);
     } else {
-      setIsClicked(true);
+      nav.classList.toggle("active");
+      setTimeout(() => {
+        setIsClicked(true);
+      }, 300);
     }
   };
   const closeSidebarOnLinkClick = () => {
     if (width <= 1000) {
       setIsClicked(false);
+      nav.classList.remove("active");
     }
   };
+
   useEffect(() => {
     if (location.pathname === "/") {
       setIsActive({ home: true });
@@ -54,8 +61,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={isActive ? "navbar active" : "navbar inactive"}>
-      <div className="logo">
+    <nav className="navbar">
+      <div
+        className="logo"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <img src={logo} alt="Logo" />
       </div>
       <div className="navigation">
@@ -70,7 +82,7 @@ const Navbar = () => {
           </button>
         )}
 
-        <div className="links" style={{ display: !isClicked && width < 1000 && "none" }}>
+        <div className="links" style={{ display: !isClicked && width < 1000 ? "none" : null }}>
           <button
             style={{ borderBottom: isActive.home ? "1px solid #ffff" : "none" }}
             onClick={() => {

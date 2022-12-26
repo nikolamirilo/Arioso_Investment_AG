@@ -1,25 +1,22 @@
 .navbar {
   min-height: 8vh;
-  height: fit-content;
+  max-height: 14vh;
   z-index: 1000;
   height: fit-content;
   width: 100%;
   background-color: $darkGray;
   position: fixed;
   top: 0;
-  -webkit-transition: all 0.6s ease-out !important;
-  -moz-transition: all 0.6s ease-out !important;
-  -o-transition: all 0.6s ease-out !important;
-  -ms-transition: all 0.6s ease-out !important;
-  transition: all 0.6s ease-out !important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   @include fadeAnimation(0.4s, 0.1s);
   @include flex(row, space-between, center);
   padding: 1vh 5vw;
   @include media($md) {
     padding: 0.2vh 2vw;
-  }
-  &:active {
-    max-height: fit-content;
   }
   .logo {
     @include flex(row, center, center);
@@ -83,7 +80,7 @@
         transition-duration: 100ms;
         transition-timing-function: ease-in;
         &:hover {
-          border-bottom: 1px solid $white !important;
+          border-bottom: 1px solid $white;
           transform: scale(1.02);
           @include media($md) {
             transform: scale(1);
@@ -94,6 +91,15 @@
           border: none;
         }
       }
+    }
+  }
+}
+@include media($md) {
+  .active {
+    min-height: 40vh;
+    max-height: 45vh;
+    .links {
+      display: flex;
     }
   }
 }
