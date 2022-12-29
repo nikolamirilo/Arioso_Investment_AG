@@ -5,6 +5,22 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 
 const Layout = ({ children }) => {
   const location = useLocation();
+  const styleFunction = () => {
+    switch (location.pathname) {
+      case "/":
+        return 200;
+      case "/about-us":
+        return 200;
+      case "/offer":
+        return 200;
+      case "/our-team":
+        return 120;
+      case "/contact":
+        return 200;
+      case "/privacy-policy":
+        return 120;
+    }
+  };
   return (
     <div className="layout">
       <div className="navbar-container">
@@ -13,20 +29,7 @@ const Layout = ({ children }) => {
       <main
         className="app"
         style={{
-          minHeight:
-            location.pathname === "/"
-              ? "200vh"
-              : location.pathname === "/about-us"
-              ? "200vh"
-              : location.pathname === "/offer"
-              ? "200vh"
-              : location.pathname === "/our-team"
-              ? "120vh"
-              : location.pathname === "/contact"
-              ? "200vh"
-              : location.pathname === "/privacy-policy"
-              ? "120vh"
-              : "100vh",
+          minHeight: `${styleFunction()}vh`,
         }}
       >
         {children}

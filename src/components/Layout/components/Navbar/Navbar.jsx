@@ -137,9 +137,12 @@ const Navbar = () => {
               style={{
                 backgroundImage: `url(${england_logo})`,
               }}
-              onClick={() => {
-                window.location.reload();
-                changeLanguage("en");
+              onClick={async () => {
+                closeSidebarOnLinkClick();
+                setTimeout(() => {
+                  window.location.reload();
+                  changeLanguage("en");
+                }, 500);
               }}
             ></div>
             <span>|</span>
@@ -148,8 +151,11 @@ const Navbar = () => {
                 backgroundImage: `url(${german_logo})`,
               }}
               onClick={() => {
-                window.location.reload();
-                changeLanguage("de");
+                closeSidebarOnLinkClick();
+                setTimeout(() => {
+                  window.location.reload();
+                  changeLanguage("de");
+                }, 500);
               }}
             ></div>
           </div>

@@ -28,7 +28,7 @@
 @mixin pageSectionPadding {
   padding: 10vh 10vw;
   @include media($xs) {
-    padding: 10vh 2vw;
+    padding: 10vh 3vw;
   }
 }
 @mixin paragraphFont {
