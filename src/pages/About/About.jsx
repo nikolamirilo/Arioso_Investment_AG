@@ -1,16 +1,20 @@
 import React from "react";
-import { BsTelephoneFill } from "react-icons/bs";
-import { Card, Hero } from "../../components";
-import data from "../../translationKeys.json";
-import hero_bg from "../../assets/images/about/about-bg.webp";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { DetailsSection } from "../../components";
+import { BsTelephoneFill } from "react-icons/bs";
+import hero_bg from "../../assets/images/about/about-bg.webp";
+import { Card, DetailsSection, Hero } from "../../components";
+import data from "../../translationKeys.json";
 
 const About = () => {
   const { t } = useTranslation();
   return (
     <div className="about">
       <Hero image={hero_bg} title="" subtitle="" />
+      <Helmet>
+        <meta name="description" content={t("WhatWeWantParagraph")} />
+        <title>{t("About Us")}</title>
+      </Helmet>
       <div className="intro-about">
         <div className="left-content">
           <p>{t("AboutUsP1")}</p>

@@ -1,12 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import { Form, Modal } from "../../components";
 import Map from "./../../components/Map/Map";
-import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation();
   return (
     <div className="contact">
+      <Helmet>
+        <meta name="description" content={t("Contact Us")} />
+        <title>{t("Contact")}</title>
+      </Helmet>
       <div className="top-content">
         <div className="left-content">
           <Form />

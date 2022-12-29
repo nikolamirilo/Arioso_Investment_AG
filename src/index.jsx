@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
-import App from "./App.jsx";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./i18n";
+import App from "./App.jsx";
 import { GlobalStateProvider } from "./context/GlobalContext";
+import "./i18n";
+import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

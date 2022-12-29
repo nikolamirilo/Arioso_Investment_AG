@@ -43,9 +43,9 @@ const Navbar = () => {
       setIsActive({ about: true });
     } else if (location.pathname === "/our-team") {
       setIsActive({ team: true });
-    } else if (location.pathname === "/offer") {
+    } else if (location.pathname === "/real-estate") {
       setIsActive({ offer: true });
-    } else if (location.pathname === "/contact") {
+    } else if (location.pathname === "/contact-us") {
       setIsActive({ contact: true });
     }
   }, [location.pathname]);
@@ -104,11 +104,11 @@ const Navbar = () => {
               borderBottom: isActive.offer ? "1px solid #ffff" : "none",
             }}
             onClick={() => {
-              navigate("/offer");
+              navigate("/real-estate");
               closeSidebarOnLinkClick();
             }}
           >
-            {t("Offer")}
+            {t("Real Estate")}
           </button>
           <button
             style={{
@@ -126,7 +126,7 @@ const Navbar = () => {
               borderBottom: isActive.contact ? "1px solid #ffff" : "none",
             }}
             onClick={() => {
-              navigate("/contact");
+              navigate("/contact-us");
               closeSidebarOnLinkClick();
             }}
           >

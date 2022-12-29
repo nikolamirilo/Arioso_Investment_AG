@@ -26,10 +26,10 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<About />} />
-              <Route path="/offer" element={<Offer />} />
+              <Route path="/real-estate" element={<Offer />} />
               <Route path="/our-team" element={<Team />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contact-us" element={<Contact />} />
               <Route path="/*" element={<Error />} />
             </Routes>
           </ScrollToTop>

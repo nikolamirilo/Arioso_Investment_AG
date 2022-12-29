@@ -1,11 +1,16 @@
 import React from "react";
-import data from "../../translationKeys.json";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import data from "../../translationKeys.json";
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation();
   return (
     <div className="privacy-policy">
+      <Helmet>
+        <meta name="description" content={t("PrivacyPolicy1P")} />
+        <title>{t("Privacy Policy")}</title>
+      </Helmet>
       <div className="top-content">
         <div className="group">
           <h3>Arioso Investment AG</h3>
