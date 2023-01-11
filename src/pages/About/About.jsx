@@ -11,10 +11,10 @@ const About = () => {
   return (
     <div className="about">
       <Hero image={hero_bg} title="" subtitle="" />
-      <Helmet>
+      {/* <Helmet>
         <meta name="description" content={t("WhatWeWantParagraph")} />
         <title>{t("About Us")}</title>
-      </Helmet>
+      </Helmet> */}
       <div className="intro-about">
         <div className="left-content">
           <p>{t("AboutUsP1")}</p>

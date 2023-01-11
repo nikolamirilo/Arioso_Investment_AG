@@ -14,21 +14,14 @@ const Offer = () => {
   const { t } = useTranslation();
   return (
     <div className="offer">
-      <Helmet>
+      {/* <Helmet>
         <meta name="description" content={t("OfferCard1P")} />
         <title>{t("Real Estate")}</title>
-      </Helmet>
+      </Helmet> */}
       <div className="offer-cards">
         {data.offer.cards
           ? data.offer.cards.map((item, idx) => {
-              return (
-                <OfferCard
-                  key={idx}
-                  type={item.type}
-                  text={t(`${item.text}`)}
-                  image={images[idx]}
-                />
-              );
+              return <OfferCard key={idx} type={item.type} text={t(`${item.text}`)} image={images[idx]} />;
             })
           : null}
       </div>

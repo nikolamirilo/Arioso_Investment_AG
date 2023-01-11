@@ -7,10 +7,10 @@ const PrivacyPolicy = () => {
   const { t } = useTranslation();
   return (
     <div className="privacy-policy">
-      <Helmet>
+      {/* <Helmet>
         <meta name="description" content={t("PrivacyPolicy1P")} />
         <title>{t("Privacy Policy")}</title>
-      </Helmet>
+      </Helmet> */}
       <div className="top-content">
         <div className="group">
           <h3>Arioso Investment AG</h3>

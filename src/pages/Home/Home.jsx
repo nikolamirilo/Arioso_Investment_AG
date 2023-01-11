@@ -15,10 +15,10 @@ const Home = () => {
   return (
     <div className="home">
       <Hero image={hero_bg} title={t("HomeTitle")} subtitle={t("HomeSubtitle")} />
-      <Helmet>
+      {/* <Helmet>
         <meta name="description" content={t("HomeP2")} />
         <title>Arioso Investment AG</title>
-      </Helmet>
+      </Helmet> */}
       <div className="intro-home">
         <div className="left-content">
           <p>{t("HomeP1")}</p>
@@ -31,28 +31,12 @@ const Home = () => {
       </div>
       <h1>{t("ServicesTitle")}</h1>
       <div className="services">
-        <Card
-          icon={<AiOutlineClockCircle size={30} />}
-          title={t("Investment")}
-          text={t("ServicesC1")}
-        />
+        <Card icon={<AiOutlineClockCircle size={30} />} title={t("Investment")} text={t("ServicesC1")} />
         <Card icon={<GiNetworkBars size={30} />} title={t("Network")} text={t("ServicesC2")} />
         <Card icon={<RxRocket size={30} />} title={t("Partner")} text={t("ServicesC3")} />
-        <Card
-          icon={<MdOutlineVerifiedUser size={30} />}
-          title={t("Trust")}
-          text={t("ServicesC4")}
-        />
-        <Card
-          icon={<FaUserGraduate size={30} color="#fff" />}
-          title={t("Expertise")}
-          text={t("ServicesC5")}
-        />
-        <Card
-          icon={<CgSandClock size={30} />}
-          title={t("Enduring Nature")}
-          text={t("ServicesC6")}
-        />
+        <Card icon={<MdOutlineVerifiedUser size={30} />} title={t("Trust")} text={t("ServicesC4")} />
+        <Card icon={<FaUserGraduate size={30} color="#fff" />} title={t("Expertise")} text={t("ServicesC5")} />
+        <Card icon={<CgSandClock size={30} />} title={t("Enduring Nature")} text={t("ServicesC6")} />
       </div>
       <Note
         image="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/New_York_Skyline_LinkedIn_Background_Photo.png?v=162791207523"
