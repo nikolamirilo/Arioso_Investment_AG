@@ -28,10 +28,9 @@ const Contact = () => {
             <p>UID/MWST-: CHE-432.401.026</p>
           </div>
           <div className="group">
-            <p>{t("Telefon")}: 321219 2109</p>
-            <p>{t("Fax")}: 10021 2918</p>
+            <p>{t("Telefon")}: 0041416770049</p>
             <p>
-              {t("Email")}: <a href="mailto:"> info@arioso-ag.ch </a>
+              {t("Email")}: <a href="mailto:office@arioso-investment.ch"> office@arioso-investment.ch </a>
             </p>
           </div>
           <div className="group">
