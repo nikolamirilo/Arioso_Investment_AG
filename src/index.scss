@@ -23,3 +23,21 @@ body {
     font-family: $fontFamily;
   }
 }
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $darkGray;
+  border-radius: 0rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gold;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gold;
+}
