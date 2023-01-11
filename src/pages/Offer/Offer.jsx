@@ -25,7 +25,6 @@ const Offer = () => {
                 <OfferCard
                   key={idx}
                   type={item.type}
-                  title={t(`${item.title}`)}
                   text={t(`${item.text}`)}
                   image={images[idx]}
                 />

@@ -63,7 +63,7 @@
     }
     .card {
       width: 48%;
-      min-height: 50vh;
+      min-height: 70vh;
       @include media($md) {
         width: 80%;
       }

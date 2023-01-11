@@ -1,5 +1,4 @@
 import React from "react";
-import { BsBuilding } from "react-icons/bs";
 
 const OfferCard = (props) => {
   return (
@@ -18,10 +17,10 @@ const OfferCard = (props) => {
         </div>
       ) : props.type === "grid-reverse" ? (
         <div className="right-content">
-          <div className="icon">
+          {/* <div className="icon">
             <BsBuilding size={40} />
           </div>
-          <h3>{props.title}</h3>
+          <h3>{props.title}</h3> */}
 
           <p>{props.text}</p>
         </div>
@@ -29,9 +28,9 @@ const OfferCard = (props) => {
 
       {props.type === "grid" ? (
         <div className="right-content">
-          <div className="icon">
+          {/* <div className="icon">
             <BsBuilding size={40} />
-          </div>
+          </div> */}
           <h3>{props.title}</h3>
           <p>{props.text}</p>
         </div>
