@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig, splitVendorChunkPlugin } from "vite";
-import generateSitemap from "vite-ssg-sitemap";
+import Sitemap from "vite-plugin-sitemap";
 
 export default defineConfig({
   plugins: [
@@ -8,12 +8,8 @@ export default defineConfig({
       runtimeHelpers: true,
     }),
     splitVendorChunkPlugin(),
+    Sitemap({hostname: "https://arioso-investment.ch"}),
   ],
-  ssgOptions: {
-    onFinished() {
-      generateSitemap({ hostname: "https://arioso-investment.ch" });
-    },
-  },
   build: {
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
