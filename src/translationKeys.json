@@ -10,7 +10,14 @@
       {
         "id": 2,
         "summary": "Business modell",
-        "paragraphs": ["Details2P1", "Details2P2", "Details2P3", "Details2P4", "Details2P5", "Details2P6"],
+        "paragraphs": [
+          "Details2P1",
+          "Details2P2",
+          "Details2P3",
+          "Details2P4",
+          "Details2P5",
+          "Details2P6"
+        ],
         "lists": [
           {
             "title": "Investor…",
