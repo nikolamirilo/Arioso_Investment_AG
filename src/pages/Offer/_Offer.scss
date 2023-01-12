@@ -7,6 +7,59 @@
     @include flex(column, center, center);
     gap: 5vh;
   }
+  .additional-offer-information {
+    @include flex(column, center, center);
+    gap: 5vh;
+    h3 {
+      font-size: 1.4rem;
+    }
+    .lists {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      @include media($xs) {
+        @include flex(column, center, center);
+      }
+      gap: 1rem;
+      padding: 2vh 2vw;
+      .list {
+        width: 400px;
+        @include flex(column, flex-start, center);
+        min-height: 25vh;
+        height: fit-content;
+        @include media($lg) {
+          width: 350px;
+          min-height: 30vh;
+        }
+        @include media($sm) {
+          width: 300px;
+        }
+        @include media($xs) {
+          width: 350px;
+        }
+        @include media(400px) {
+          width: 96%;
+        }
+        gap: 2vh;
+        h4 {
+          font-size: 1.2rem;
+          text-align: left;
+          width: 80%;
+        }
+        ul {
+          width: 80%;
+          @include media($xs) {
+            width: 90%;
+          }
+          li {
+            @include paragraphFont;
+          }
+        }
+      }
+    }
+  }
   .note {
     @include media($sm) {
       @include backgroundObjectImage(100%, 50vh);

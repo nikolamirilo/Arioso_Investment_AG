@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import card_img1 from "../../assets/images/offer/card_img1.webp";
 import card_img2 from "../../assets/images/offer/card_img2.webp";
@@ -21,9 +20,52 @@ const Offer = () => {
       <div className="offer-cards">
         {data.offer.cards
           ? data.offer.cards.map((item, idx) => {
-              return <OfferCard key={idx} type={item.type} text={t(`${item.text}`)} image={images[idx]} />;
+              return (
+                <OfferCard
+                  key={idx}
+                  type={item.type}
+                  text={t(`${item.text}`)}
+                  image={images[idx]}
+                />
+              );
             })
           : null}
+      </div>
+      <div className="additional-offer-information">
+        <h3>{t("Our overriding investment profile:")}</h3>
+        <div className="lists">
+          <div className="list">
+            <h4>{t("Investment properties")}</h4>
+            <ul>
+              <li>
+                {t(
+                  "Individual apartments and apartment buildings in particular renovation and in need of renovation"
+                )}
+              </li>
+              <li>{t("Existing properties with conversion potential")}</li>
+              <li>{t("Houses with renovation / expansion potential")}</li>
+            </ul>
+          </div>
+          <div className="list">
+            <h4>{t("Special properties")}</h4>
+            <ul>
+              <li>{t("Lofts")}</li>
+              <li>{t("Property packages")}</li>
+              <li>{t("Apartment buildings")}</li>
+              <li>{t("Villas, luxury real estate")}</li>
+              <li>{t("Hotel")}</li>
+              <li>{t("Pension")}</li>
+              <li>{t("Restaurants")}</li>
+            </ul>
+          </div>
+          <div className="list">
+            <h4>{t("Building sites")}</h4>
+            <ul>
+              <li>{t("Unterschiedlichster orders of magnitude")}</li>
+              <li>{t("With and without planning permission")}</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <Note image={note_bg} type="offer-note" quote={t("OfferNote")} />
     </div>
