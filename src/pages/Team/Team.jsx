@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { TeamMemberCard } from "../../components";
 
@@ -13,12 +12,16 @@ const Team = () => {
         <title>{t("Meet Our Team")}</title>
       </Helmet>
       <div className="team-members">
-        <TeamMemberCard title="Nikola Mirilo" position="Project Manager" email="nikolamirilo@gmail.com" />
-        <TeamMemberCard title="Pera Peric" position="Frontend Web Developer" email="peraperic@gmail.com" />
-        <TeamMemberCard title="Miroslav Mikic" position="Q/A Tester" email="miroslavmikic@gmail.com" />
-        <TeamMemberCard title="Nikola Mirilo" position="Project Manager" email="nikolamirilo@gmail.com" />
-        <TeamMemberCard title="Pera Peric" position="Frontend Web Developer" email="peraperic@gmail.com" />
-        <TeamMemberCard title="Miroslav Mikic" position="Q/A Tester" email="miroslavmikic@gmail.com" />
+        <TeamMemberCard title="Aleksander F. Weiler" position={t("Director")} />
+        <TeamMemberCard title="Adrianus Floor" position={t("Director")} />
+        <TeamMemberCard title="Eduard Maresch" position={t("Finance Director")} />
+        <TeamMemberCard title="Wolfgang J. Weuthen" position="Manager" />
+        <TeamMemberCard title="Simon Wellenstein" position="Manager" />
+        <TeamMemberCard title="Sophia Ambranov" position={t("Architect")} />
+        <TeamMemberCard title="Patrick Sommer" position={t("Employee")} />
+        <TeamMemberCard title="Richard Schuhmann" position={t("Employee")} />
+        <TeamMemberCard title="Matthias Schuster" position={t("Employee")} />
+        <TeamMemberCard title="Verona Seibling" position={t("Secretary")} />
       </div>
     </div>
   );

@@ -5,18 +5,18 @@
   position: relative;
   @include boxShadow;
   @include flex(column, flex-start, center);
+  min-height: 12vh;
   gap: 1vh;
-  width: 450px;
+  @include media($xxl) {
+    width: 32%;
+  }
   @include media($lg) {
-    width: 400px;
+    width: 45%;
   }
   @include media($md) {
-    width: 80%;
+    width: 48%;
   }
-  @include media($sm) {
-    width: 90%;
-  }
-  @include media($xs) {
+  @include media(700px) {
     width: 96%;
   }
   @include media($xxs) {
@@ -24,11 +24,11 @@
   }
   h3 {
     font-size: 1.4rem;
-    font-weight: 550;
+    font-weight: 900;
   }
   h4 {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500;
   }
   a {
     @include paragraphFont;
