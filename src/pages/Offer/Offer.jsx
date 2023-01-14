@@ -6,6 +6,7 @@ import card_img3 from "../../assets/images/offer/card_img3.webp";
 import card_img4 from "../../assets/images/offer/card_img4.webp";
 import note_bg from "../../assets/images/offer/note-bg.webp";
 import { Note, OfferCard } from "../../components";
+import { Helmet } from "react-helmet";
 import data from "../../translationKeys.json";
 
 const Offer = () => {
@@ -23,14 +24,7 @@ const Offer = () => {
       <div className="offer-cards">
         {data.offer.cards
           ? data.offer.cards.map((item, idx) => {
-              return (
-                <OfferCard
-                  key={idx}
-                  type={item.type}
-                  text={t(`${item.text}`)}
-                  image={images[idx]}
-                />
-              );
+              return <OfferCard key={idx} type={item.type} text={t(`${item.text}`)} image={images[idx]} />;
             })
           : null}
       </div>
@@ -41,9 +35,7 @@ const Offer = () => {
             <h4>{t("Investment properties")}</h4>
             <ul>
               <li>
-                {t(
-                  "Individual apartments and apartment buildings in particular renovation and in need of renovation"
-                )}
+                {t("Individual apartments and apartment buildings in particular renovation and in need of renovation")}
               </li>
               <li>{t("Existing properties with conversion potential")}</li>
               <li>{t("Houses with renovation / expansion potential")}</li>
