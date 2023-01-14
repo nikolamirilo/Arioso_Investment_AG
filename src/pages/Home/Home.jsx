@@ -14,15 +14,14 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <div className="home">
-      <Hero
-        image={hero_bg}
-        title={t("HomeTitle")}
-        subtitle="Arioso Investment AG is a real estate investment firm specializing in the acquisition, development and management of commercial real estate (office, logistics and retail centers) in Western, Central and Eastern Europe, with a primary focus on Austria, Germany, Switzerland, and Czech Republic."
-      />
       <Helmet>
-        <meta name="description" content={t("HomeP2")} />
+        <meta
+          name="description"
+          content="Arioso Investment AG is a real estate investment firm specializing in the acquisition, development and management of commercial real estate (office, logistics and retail centers) in Western, Central and Eastern Europe, with a primary focus on Austria, Germany, Switzerland, and Czech Republic."
+        />
         <title>Arioso Investment AG</title>
       </Helmet>
+      <Hero image={hero_bg} title={t("HomeTitle")} subtitle={t("HomeSubtitle")} />
       <div className="intro-home">
         <div className="left-content">
           <p>{t("HomeP1")}</p>
