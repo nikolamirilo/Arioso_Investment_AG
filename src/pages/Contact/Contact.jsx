@@ -8,10 +8,10 @@ const Contact = () => {
   const { t } = useTranslation();
   return (
     <div className="contact">
-      {/* <Helmet>
-        <meta name="description" content={t("Contact Us")} />
+      <Helmet>
+        <meta name="description" content="Contact us" />
         <title>{t("Contact")}</title>
-      </Helmet> */}
+      </Helmet>
       <div className="top-content">
         <div className="left-content">
           <Form />

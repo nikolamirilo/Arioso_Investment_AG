@@ -8,10 +8,10 @@ const Team = () => {
   return (
     <div className="team">
       <h1>{t("Meet Our Team")}</h1>
-      {/* <Helmet>
-        <meta name="description" content={t("Meet Our Team")} />
+      <Helmet>
+        <meta name="description" content="Meet our team of experts in real estate business" />
         <title>{t("Meet Our Team")}</title>
-      </Helmet> */}
+      </Helmet>
       <div className="team-members">
         <TeamMemberCard title="Nikola Mirilo" position="Project Manager" email="nikolamirilo@gmail.com" />
         <TeamMemberCard title="Pera Peric" position="Frontend Web Developer" email="peraperic@gmail.com" />

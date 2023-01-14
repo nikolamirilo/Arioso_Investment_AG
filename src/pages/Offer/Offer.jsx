@@ -14,10 +14,13 @@ const Offer = () => {
   const { t } = useTranslation();
   return (
     <div className="offer">
-      {/* <Helmet>
-        <meta name="description" content={t("OfferCard1P")} />
+      <Helmet>
+        <meta
+          name="description"
+          content="Both as developers D-A-CH area as well as buyers of properties we are interested in all types of properties in select locations in and around D-A-CH area. If you want to sell a piece of land or house and looking for a solvent and reliable buyer, please contact our qualified experts. We create a professional and market-oriented real estate valuation D-A-CH area for the following items: Investment properties, Special Real Estates, and Building sites."
+        />
         <title>{t("Real Estate")}</title>
-      </Helmet> */}
+      </Helmet>
       <div className="offer-cards">
         {data.offer.cards
           ? data.offer.cards.map((item, idx) => {

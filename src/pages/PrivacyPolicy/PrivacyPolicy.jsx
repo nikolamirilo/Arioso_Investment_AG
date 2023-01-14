@@ -7,10 +7,13 @@ const PrivacyPolicy = () => {
   const { t } = useTranslation();
   return (
     <div className="privacy-policy">
-      {/* <Helmet>
-        <meta name="description" content={t("PrivacyPolicy1P")} />
+      <Helmet>
+        <meta
+          name="description"
+          content="The contents of our pages were created with great care. However, we can not assume any liability for the accuracy, completeness and timeliness of the content. As a service provider we are responsible according to § 7 Abs.1 TMG for own contents on these sides according to the general laws. According to § 8 to 10 TMG, however, we as a service provider are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate an illegal activity. Obligations to remove or block the use of information under general law remain unaffected. A liability in this regard, however, is only possible from the date of knowledge of a specific infringement. If we become aware of such violations, we will remove this content immediately."
+        />
         <title>{t("Privacy Policy")}</title>
-      </Helmet> */}
+      </Helmet>
       <div className="top-content">
         <div className="group">
           <h3>Arioso Investment AG</h3>

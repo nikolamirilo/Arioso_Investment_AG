@@ -11,10 +11,13 @@ const About = () => {
   return (
     <div className="about">
       <Hero image={hero_bg} title="" subtitle="" />
-      {/* <Helmet>
-        <meta name="description" content={t("WhatWeWantParagraph")} />
+      <Helmet>
+        <meta
+          name="description"
+          content="We want our portfolio companies to grow – that is the shared objective of the entrepreneurs in whom we invest and the investors. To achieve this, we need to take many steps together, with our sights always set firmly on the desired level of success. Investor enables wealthy private investors to meet successful companies, with each investor being free to choose whether he or she “only” lets his or her money work for him or her or whether he or she also contributes his or her business expertise and actively assists the portfolio company with its future growth. Together with the entrepreneur, we and our investors bear the risk involved in the company’s further growth in order to realize new ideas for further development. For this reason, we make a very careful selection and actively oversee every investment. Are you looking for like-minded partners, either to invest or because your company needs finance? Below, we have compiled some further information about our approach, both for interested investors and for capital-seeking entrepreneurs."
+        />
         <title>{t("About Us")}</title>
-      </Helmet> */}
+      </Helmet>
       <div className="intro-about">
         <div className="left-content">
           <p>{t("AboutUsP1")}</p>
