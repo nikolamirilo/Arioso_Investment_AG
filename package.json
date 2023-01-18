@@ -6,7 +6,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@emailjs/browser": "^3.10.0",
-    "babel-polyfill": "^6.26.0",
     "i18next": "^21.8.14",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.1",
