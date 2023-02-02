@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="group">
             <p>{t("Telefon")}: 0041416770049</p>
             <p>
-              {t("Email")}: <a href="mailto:office@arioso-investment.ch"> office@arioso-investment.ch </a>
+              {t("Email")}: <a href="mailto:info@arioso-investment.ch"> info@arioso-investment.ch </a>
             </p>
           </div>
           <div className="group">
