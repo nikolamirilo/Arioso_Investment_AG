@@ -21,6 +21,7 @@ const Team = () => {
         <TeamMemberCard title="Sophia Ambranov" position={t("Architect")} />
         <TeamMemberCard title="Patrick Sommer" position={t("Employee")} />
         <TeamMemberCard title="Richard Schuhmann" position={t("Employee")} />
+        <TeamMemberCard title="Simona Weuthen " position={t("Employee")} />                                                  
         <TeamMemberCard title="Matthias Schuster" position={t("Employee")} />
         <TeamMemberCard title="Verona Seibling" position={t("Secretary")} />
       </div>
