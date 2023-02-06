@@ -14,7 +14,7 @@ const Footer = () => {
       </div>
       <div className="right-content">
         <Link to="/privacy-policy">{t("Privacy Policy")}</Link>
-        <p>{t("Copyright")} @Ariso Investment AG 2022</p>
+        <p>{t("Copyright")} @Arioso Investment AG 2022</p>
       </div>
     </footer>
   );
